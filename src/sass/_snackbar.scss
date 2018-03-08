@@ -1,0 +1,11 @@
+.mdc-snackbar {
+  z-index: 100;
+  .mdc-snackbar__action-button {
+    color: theme-color('info');
+  }
+}
+
+.mdc-snackbar--right{
+  right: 24px;
+  left: auto;
+}

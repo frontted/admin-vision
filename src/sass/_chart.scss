@@ -1,0 +1,45 @@
+.chart-container {
+  margin-bottom: $spacer;
+
+  .progress {
+    margin-bottom: $spacer;
+  }
+
+  > div {
+    .card {
+      height: 370px;
+    }
+  }
+
+  .row {
+    &.no-gutters {
+      &-separator > div:not(:last-child) {
+        @include media-breakpoint-up(sm) {
+          border-right: 1px solid $border-color;
+        }
+        @include media-breakpoint-down(sm) {
+          border-right: 0;
+          border-bottom: 1px solid $border-color;
+        }
+      }
+    }
+  }
+}
+
+.doughnut-chart-wrapper {
+  position: relative;
+  display: block;
+  margin-top: -5px;
+  .doughnut-chart-text {
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    top: 5px;
+    vertical-align:middle;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    div { line-height: 1; text-align: center;}
+    h3 { margin:0; }
+  }
+}

@@ -1,0 +1,27 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap-color-yiq";
+
+@import "variables"; // APP VARIABLES
+
+@import "bootstrap-core"; // BS
+@import "bootstrap-dependencies"; // BS
+
+// MDK
+@import 'material-design-kit/src/style';
+
+@import "@material/switch/mdc-switch";
+@import "@material/snackbar/mdc-snackbar";
+
+// Select2
+@import "select2/src/scss/core";
+@import "select2-vars";
+@import "select2-bootstrap-theme/src/select2-bootstrap.scss";
+@import "select2-after";
+
+// Material Icons
+@import 'material-icons';
+
+// Custom Styling
+@import "chart";
+@import "snackbar";
+@import "ui-loaders";
