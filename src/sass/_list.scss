@@ -1,0 +1,14 @@
+.list-group {
+  &.list-rankings {
+    .list-group-item {
+      border-left: 0;
+      border-right: 0;
+      &:first-of-type {
+        border-top: 0;
+      }
+      &:last-of-type {
+        border-bottom: 0;
+      }
+    }
+  }
+}

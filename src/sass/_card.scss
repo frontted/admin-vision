@@ -1,0 +1,14 @@
+.content-fixed {
+  .card-group {
+    margin-bottom: $grid-gutter-width;
+  }
+  .card {
+    margin-bottom: $grid-gutter-width;
+    .card-header {
+      .card-title {
+        font-weight: 500;
+        margin-bottom:0;
+      }
+    }
+  }
+}

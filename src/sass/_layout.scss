@@ -1,0 +1,9 @@
+.content-fixed {
+  padding-bottom: $grid-gutter-width;
+}
+
+.page-banner {
+  height: 300px;
+  background: theme-color('primary');
+  text-align: center;
+}

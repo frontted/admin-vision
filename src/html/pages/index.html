@@ -1,0 +1,76 @@
+---
+title: Vision
+slug: index
+category: index
+---
+{% extends "layouts/fixed.html" %}
+
+{%
+  set orders = [
+    {
+      date: '09 Feb 2018',
+      customer: 'Mark Ups',
+      discount: '12.5%',
+      invoice: '#119928',
+      total: '29,021'
+    },
+    {
+      date: '06 Feb 2018',
+      customer: 'Karen Smith',
+      discount: '10.0%',
+      invoice: '#22018',
+      total: '12,220'
+    },
+    {
+      date: '06 Feb 2018',
+      customer: 'John Mix',
+      discount: '8.5%',
+      invoice: '#98201',
+      total: '8,370'
+    },
+    {
+      date: '12 Jan 2018',
+      customer: 'Tara Knows',
+      discount: '32.0%',
+      invoice: '#118230',
+      total: '14,500'
+    },
+    {
+      date: '10 Jan 2018',
+      customer: 'John Smith',
+      discount: '15.5%',
+      invoice: '#22198',
+      total: '9,860'
+    }
+  ]
+%}
+
+{%
+  set rankings = [
+    {
+      user: 'Tara Knows',
+      image: 'assets/images/avatars/person-9.jpg',
+      revenue: '29,021'
+    },
+    {
+      user: 'Karen Smith',
+      image: 'assets/images/avatars/person-13.jpg',
+      revenue: '25,250'
+    },
+    {
+      user: 'Mark Ups',
+      image: 'assets/images/avatars/person-6.jpg',
+      revenue: '21,330'
+    },
+    {
+      user: 'Steven Short',
+      image: 'assets/images/avatars/person-5.jpg',
+      revenue: '17,740'
+    },
+    {
+      user: 'John Mix',
+      image: 'assets/images/avatars/person-7.jpg',
+      revenue: '13,120'
+    }
+  ]
+%}
