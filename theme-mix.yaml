@@ -1,0 +1,44 @@
+runTasks:
+  clean: true
+  js: true
+  copy: true
+  sass: true
+  html: true
+enableCssThemes: false
+enableCssRTL: true
+copyCwd: node_modules
+copyDest: dist/assets/vendor
+copy:
+  - bootstrap/dist/js/bootstrap.min.js
+  - jquery/dist/jquery.min.js
+  - popper.js/dist/umd/popper.js
+  - fullcalendar/dist/fullcalendar.min.js
+  - moment/min/moment.min.js
+  - chart.js/dist/Chart.min.js
+  - select2/dist/js/select2.full.min.js
+  - dateformat/lib/dateformat.js
+  - bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js
+  - bootstrap-switch/dist/js/bootstrap-switch.min.js
+  - morris.js/morris.min.js
+  - raphael/raphael.min.js
+  - owl.carousel/dist/owl.carousel.min.js
+  - summernote/dist/summernote-bs4.min.js
+  - dragula/dist/dragula.min.js
+  - jquery-ui-dist/jquery-ui.min.js
+  - datatables.net/js/jquery.dataTables.js
+  - datatables.net-bs4/js/dataTables.bootstrap4.js
+  - material-design-icons-iconfont/dist/fonts/*.{eot,ttf,woff,woff2}: dist/assets/fonts/material-icons
+  - summernote/dist/font/*.{eot,ttf,woff}: dist/assets/fonts/summernote
+  - dom-factory/dist/*
+  - material-design-kit/dist/material-design-kit.js
+  - simplebar/umd/*
+clean:
+  - dist/**/*.html
+  - dist/assets/{css,fonts,js,vendor}
+sassSrc: src/sass/*.scss
+cssDest: dist/assets/css
+jsSrc: src/js/**/**.{js,vue}
+jsDest: dist/assets/js
+htmlDest: dist/[path][name].html
+laravelMixOptions:
+  processCssUrls: false

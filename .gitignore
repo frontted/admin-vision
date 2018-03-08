@@ -1,0 +1,17 @@
+node_modules/
+dist/**/*.html
+dist/assets/css
+dist/assets/js
+dist/assets/vendor
+dist/assets/fonts
+/mix.js
+/mix-manifest.json
+/temp
+
+package-lock.json
+
+dist/assets/.DS_Store
+
+dist/assets/.DS_Store
+
+dist/assets/images/.DS_Store
