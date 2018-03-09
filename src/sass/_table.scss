@@ -1,0 +1,11 @@
+.table {
+  thead th {
+    border-top: 0;
+    text-transform: uppercase;
+    font-weight: 400;
+    opacity: 0.54;
+    font-size: 0.875rem;
+    color: theme-color('muted-color');
+    letter-spacing: 0.98px;
+  }
+}

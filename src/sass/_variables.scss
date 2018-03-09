@@ -37,10 +37,7 @@ $btn-secondary-bg: $body-bg;
 $btn-secondary-border: $border-color;
 
 // Fonts
-$font-size-base: 0.875rem;
-$font-size-sm: 0.75rem;
-$font-size-h6: 0.875rem;
-$badge-font-size: 0.75rem;
+$font-size-base: 1rem;
 
 // Spacing
 $spacer: 1.25rem;
@@ -62,7 +59,7 @@ $list-group-item-padding-x:      1rem;
 
 // Fonts
 
-$font-family-base: 'Helvetica Neue', 'Helvetica', Arial;
+$font-family-base: 'Roboto', 'Arial';
 $small-font-size: .725rem;
 
 $progress-height: 8px;

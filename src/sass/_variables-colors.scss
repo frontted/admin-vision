@@ -33,8 +33,9 @@ $cyan:    #5dd2bc !default; // custom
 // define themes
 $themes: (
   default: (
-    primary: #3783B5, // primary color
+    primary: #2E7CCE, // primary color
     primary-dark: #25364A,
+    dark: #585969,
     success: #7BB859,
     info: $cyan,
     warning: $yellow,
@@ -44,7 +45,7 @@ $themes: (
     border-color: #E2E8EE,
     text-color: #25364A,
     link-color: #44AAED,
-    muted-color: #6c757d,
+    muted-color: #37394C,
     facebook: #3B5998,
     twitter: #00ACED,
     instagram: #E4405F,

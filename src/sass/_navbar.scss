@@ -5,6 +5,8 @@
   align-items: center;
   z-index: 1;
   .nav-item {
+    font-size: 1.125rem;
+    letter-spacing: 0.0625rem;
     &.notifications, &.message, &.emails {
       .dropdown-menu { padding: 0; border-top: 0; }
       #notifications-ul {
