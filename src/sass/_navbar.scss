@@ -7,6 +7,20 @@
   .nav-item {
     font-size: 1.125rem;
     letter-spacing: 0.0625rem;
+    padding: 10px 0;
+    .nav-link {
+      opacity: 0.54;
+      font-size: 1.125rem;
+      color: theme-color('muted-color');
+      letter-spacing: 0.0625rem;
+    }
+    &.active {
+      .nav-link {
+        opacity: 1;
+        color: theme-color('text-color') !important;
+      }
+      border-bottom: 4px solid #2E7CCE;
+    }
     &.notifications, &.message, &.emails {
       .dropdown-menu { padding: 0; border-top: 0; }
       #notifications-ul {
@@ -42,27 +56,9 @@
        }
      }
    }
-   &.nav-divider {
-    position: relative;
-    width:2px;
-    height:30px;
-    align-self: center;
-
-    &:before {
-      position: absolute;
-      content: '';
-      left:0;
-      height: 100%;
-      width:1px;
-      background: rgba(255,255,255, .18);
-    }
-    &:after {
-      position: absolute;
-      content: '';
-      right: 0;
-      height: 100%;
-      width: 1px;
-      background: rgba(0, 0, 0, .24);
+   &.nav-account {
+    .nav-link {
+      opacity: 1;
     }
   }
 }
