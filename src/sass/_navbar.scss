@@ -4,64 +4,39 @@
   display: flex;
   align-items: center;
   z-index: 1;
-  .nav-item {
-    font-size: 1.125rem;
-    letter-spacing: 0.0625rem;
-    padding: 10px 0;
-    .nav-link {
-      opacity: 0.54;
-      font-size: 1.125rem;
-      color: theme-color('muted-color');
-      letter-spacing: 0.0625rem;
-    }
-    &.active {
+  .navbar-nav.navbar-center {
+    width: 100%;
+    justify-content: center;
+    .nav-item {
+      padding: 0.625rem 0;
       .nav-link {
-        opacity: 1;
-        color: theme-color('text-color') !important;
+        font-weight: 300;
+        font-size: 1.125rem;
+        color: #D8D8D8;
+        letter-spacing: 0.0625rem;
       }
-      border-bottom: 4px solid #2E7CCE;
-    }
-    &.notifications, &.message, &.emails {
-      .dropdown-menu { padding: 0; border-top: 0; }
-      #notifications-ul {
-        background: theme-color('primary-dark');
-        border-radius: 0;
+      &.active {
         .nav-link {
-          &:first-of-type { padding-left: 0.5rem }
-          color: rgba(255,255,255, 0.54);
-          &.active {
-            color:#fff;
-          }
+          color: theme-color('text-color') !important;
         }
+        border-bottom: 4px solid #2E7CCE;
       }
-      .dropdown-toggle::after {
-       content: none;
-     }
-     a:focus {
-       outline: none;
-     }
-     .tab-content {
-       width: 280px;
-       padding: 0;
-       ul.list-group-flush {
-         li.list-group-item {
-           &:not(:last-of-type) {
-             background: rgba($body-bg, .5);
-             border-color: $border-color;
-           }
-           &:hover {
-             color: $body-color !important;
-           }
-         }
-       }
-     }
-   }
-   &.nav-account {
-    .nav-link {
-      opacity: 1;
+      &:not(:first-of-type) {
+        padding-left: 2.438rem;
+      }
     }
   }
-}
+
+  .navbar-nav.navbar-right {
+    align-items: center;
+    margin-left: auto;
+    .nav-item {
+      color: #D8D8D8;
+      &:not(:last-of-type) {
+        margin-right: 1.625rem;
+      }
+    }
+  }
 }
 
 .dropdown-toggle.dropdown-clear-caret {

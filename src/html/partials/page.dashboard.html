@@ -1,0 +1,104 @@
+<div class="container-fluid">
+  <div class="card-deck">
+
+    <div class="card">
+      <div class="card-body d-flex flex-column align-items-center justify-content-center py-4">
+        <div class="circle mb-3">
+          <i class="material-icons md-48 align-middle">vpn_key</i>
+        </div>
+        <div class="h1 mb-2">&dollar;332,201</div>
+        <div class="card-subtitle">Sales in february 2018</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body d-flex flex-column align-items-center justify-content-center py-4">
+        <div class="mb-3">
+          <i class="material-icons md-76 align-middle text-primary">iso</i>
+        </div>
+        <div class="h1 mb-2">&dollar;1,029</div>
+        <div class="card-subtitle">Sales in february 2018</div>
+      </div>
+    </div>
+
+    <div class="card card-dark">
+      <div class="card-body d-flex flex-column align-items-center justify-content-center">
+        <div class="doughnut-chart-wrapper mb-2">
+          <div class="doughnut-chart-text">
+            <div>
+              <div class="h1">60%</div>
+            </div>
+          </div>
+          <canvas class="milestone-chart"></canvas>
+        </div>
+        <div class="card-subtitle text-white opacity-1">Milestone 1.0.0</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="card">
+    <div class="card-body">
+      <div class="row align-items-center mb-3">
+        <div class="col-md-8">
+          <h4 class="card-title">Orders</h4>
+        </div>
+        <div class="col-md-4 text-md-right">
+          <a href="#">
+            <i class="material-icons align-middle text-muted">more_vert</i>
+          </a>
+        </div>
+      </div>
+      <div class="table-responsive">
+        <table class="table table-orders m-0">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th style="width: 400px;">Customer</th>
+              <th>Discount</th>
+              <th>Invoice</th>
+              <th class="text-right">Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for order in orders %}
+            <tr>
+              <td>{{ order.date }}</td>
+              <td>
+                <span class="align-middle mr-1">{{ order.customer }}</span>
+                <i class="material-icons md-18 align-middle text-primary">email</i>
+              </td>
+              <td>{{ order.discount }}</td>
+              <td>
+                <a href="#">{{ order.invoice }}</a>
+              </td>
+              <td class="text-right">&dollar;{{ order.total }}</td>
+            </tr>
+            {% endfor %}
+            <tr>
+              <td colspan="5">
+                <div class="float-right">
+                  <i class="material-icons align-middle">chevron_left</i>
+                  <span class="text-muted align-middle">Page 1 of 10</span>
+                  <i class="material-icons align-middle">chevron_right</i>
+                </div>
+                <a href="#" class="text-uppercase">View All</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="subscribe">
+    <div class="d-md-flex align-items-center">
+      <img src="https://pbs.twimg.com/profile_images/928893978266697728/3enwe0fO_400x400.jpg" class="img-fluid rounded-circle" width="84" alt="">
+      <div class="subscribe-text">
+        <h4>Follow our team</h4>
+        <div>Hey guest! Keep in touch with our latest theme releases and subscribe to our newsletter.</div>
+      </div>
+      <button class="btn btn-primary-dark text-uppercase ml-auto">Join Now</button>
+    </div>
+  </div>
+</div>

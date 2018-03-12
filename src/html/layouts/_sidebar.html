@@ -1,0 +1,124 @@
+{% set prefix_theme = theme + '-' if theme %}
+<nav class="drawer {{ drawerClass if drawerClass else 'drawer--light' }}">
+  <div class="drawer-spacer drawer-spacer-border">
+    <div class="media align-items-center">
+      <img src="https://pbs.twimg.com/profile_images/928893978266697728/3enwe0fO_400x400.jpg" class="img-fluid rounded-circle mr-2" width="50"
+      alt="">
+      <div class="media-body">
+        <a href="index.html" class="h5 m-0 text-link">Frontted</a>
+        <div>
+          <small class="text-uppercase text-muted">Account Manager</small>
+        </div>
+      </div>
+      <div class="dropdown show">
+        <a class="dropdown-toggle dropdown-clear-caret text-muted" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="material-icons align-middle">more_vert</i>
+        </a>
+
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN MENU -->
+  <ul class="drawer-menu drawer-main" id="mainMenu" data-children=".drawer-submenu">
+    <li class="drawer-menu-item active">
+      <a href="charts.html">
+        <span class="drawer-menu-text">Dashboard</span>
+      </a>
+    </li>
+    <li class="drawer-menu-item drawer-submenu">
+      <a data-toggle="collapse" data-parent="#mainMenu" href="#" data-target="#layoutsMenu" aria-controls="layoutsMenu" {% if category == 'layouts' %} aria-expanded="true"  {% else %}  aria-expanded="false"  class="collapsed"{% endif %}>
+        <span class="drawer-menu-text">Layouts</span>
+      </a>
+      <ul class="collapse {% if category == 'layouts' %}show {% endif %}" id="layoutsMenu">
+        <li class="drawer-menu-item"><a href="#">Layout 1</a></li>
+        <li class="drawer-menu-item"><a href="#">Layout 2</a></li>
+        <li class="drawer-menu-item"><a href="#">Layout 3</a></li>
+      </ul>
+    </li>
+    <li class="drawer-menu-item drawer-submenu">
+      <a data-toggle="collapse" data-parent="#mainMenu" href="#" data-target="#pagesMenu" aria-controls="pagesMenu" {% if category == 'pages' %} aria-expanded="true"  {% else %}  aria-expanded="false"  class="collapsed"{% endif %}>
+        <span class="drawer-menu-text">Pages</span>
+      </a>
+      <ul class="collapse {% if category == 'pages' %}show {% endif %}" id="pagesMenu">
+        <li class="drawer-menu-item"><a href="#">Page 1</a></li>
+        <li class="drawer-menu-item"><a href="#">Page 2</a></li>
+        <li class="drawer-menu-item"><a href="#">Page 3</a></li>
+      </ul>
+    </li>
+    <li class="drawer-menu-item drawer-submenu">
+      <a data-toggle="collapse" data-parent="#mainMenu" href="#" data-target="#uiComponentsMenu" aria-controls="uiComponentsMenu" {% if category == 'ui' %} aria-expanded="true"  {% else %}  aria-expanded="false"  class="collapsed"{% endif %}>
+        <span class="drawer-menu-text">Components</span>
+      </a>
+      <ul class="collapse {% if category == 'ui' %}show {% endif %}" id="uiComponentsMenu">
+        <li class="drawer-menu-item {% if slug == 'ui-buttons' %}active {% endif %}"><a href="{{ prefix_theme }}ui-buttons.html">Buttons</a></li>
+        <li class="drawer-menu-item {% if slug == 'ui-colors' %}active {% endif %}"><a href="{{ prefix_theme }}ui-colors.html">Colors</a></li>
+        <li class="drawer-menu-item {% if slug == 'ui-grid' %}active {% endif %}"><a href="{{ prefix_theme }}ui-grid.html">Grid</a></li>
+        <li class="drawer-menu-item {% if slug == 'ui-icons' %}active {% endif %}"><a href="{{ prefix_theme }}ui-icons.html">Icons</a></li>
+        <li class="drawer-menu-item {% if slug == 'ui-typography' %}active {% endif %}"><a href="{{ prefix_theme }}ui-typography.html">Typography</a></li>
+        <li class="drawer-menu-item {% if slug == 'ui-drag-drop' %}active {% endif %}"><a href="{{ prefix_theme }}ui-drag-drop.html">Drag &amp; Drop</a></li>
+        <li class="drawer-menu-item {% if slug == 'ui-tables' %}active {% endif %}"><a href="{{ prefix_theme }}ui-tables.html">Tables</a></li>
+        <li class="drawer-menu-item {% if slug == 'ui-notifications' %}active {% endif %}"><a href="{{ prefix_theme }}ui-notifications.html">Notification</a></li>
+        <li class="drawer-menu-item {% if slug == 'ui-loaders' %}active {% endif %}"><a href="{{ prefix_theme }}ui-loaders.html">Loaders</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <!-- STATS MENU -->
+  <ul class="drawer-menu drawer-stats" data-children=".drawer-submenu">
+    <div class="drawer-heading">
+      Stats
+    </div>
+    <li class="drawer-menu-item">
+      <div class="d-flex align-items-center justify-content-between">
+        <span class="drawer-menu-text">Sign-Ups</span>
+        <span>40%</span>
+      </div>
+      <div class="progress">
+        <div class="progress-bar bg-success" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+    </li>
+    <li class="drawer-menu-item">
+      <div class="d-flex align-items-center justify-content-between">
+        <span class="drawer-menu-text">Target</span>
+        <span>85%</span>
+      </div>
+      <div class="progress">
+        <div class="progress-bar bg-primary" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+    </li>
+    <li class="drawer-menu-item">
+      <div class="d-flex align-items-center justify-content-between">
+        <span class="drawer-menu-text">Milestone 1.0.0</span>
+        <span>62%</span>
+      </div>
+      <div class="progress">
+        <div class="progress-bar bg-dark" role="progressbar" style="width: 62%" aria-valuenow="62" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+    </li>
+  </ul>
+
+  <!-- RECENT ACTIVITY MENU -->
+  <ul class="drawer-menu drawer-activity" data-children=".drawer-submenu">
+    <div class="drawer-heading">
+      Recent Activity
+    </div>
+    {% for activity in activities %}
+      <li class="drawer-menu-item">
+        <div class="activity-icon">
+          <i class="material-icons md-14 align-middle text-{{ activity.icon_color }}">lens</i>
+        </div>
+        <div class="activity-content">
+          <a href="#">{{ activity.user }}</a>
+          <span>{{ activity.description|safe }}</span>
+          <div class="text-muted">{{ activity.date }}</div>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>

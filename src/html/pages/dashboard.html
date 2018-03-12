@@ -1,0 +1,116 @@
+---
+title: Vision
+slug: dashboard
+category: dashboard
+---
+{% extends "layouts/default.html" %}
+
+{%
+  set orders = [
+    {
+      date: '09 Feb 2018',
+      customer: 'Mark Ups',
+      discount: '12.5%',
+      invoice: '#119928',
+      total: '29,021'
+    },
+    {
+      date: '06 Feb 2018',
+      customer: 'Karen Smith',
+      discount: '10.0%',
+      invoice: '#22018',
+      total: '12,220'
+    },
+    {
+      date: '06 Feb 2018',
+      customer: 'John Mix',
+      discount: '8.5%',
+      invoice: '#98201',
+      total: '8,370'
+    },
+    {
+      date: '12 Jan 2018',
+      customer: 'Tara Knows',
+      discount: '32.0%',
+      invoice: '#118230',
+      total: '14,500'
+    },
+    {
+      date: '10 Jan 2018',
+      customer: 'John Smith',
+      discount: '15.5%',
+      invoice: '#22198',
+      total: '9,860'
+    }
+  ]
+%}
+
+{%
+  set activities = [
+    {
+      user: 'Andrew Robles',
+      icon_color: 'primary',
+      description: 'completed task <a href="#">#8809</a>',
+      date: 'now',
+      comments: '2',
+      likes: '21'
+    },
+    {
+      user: 'Michael Fox',
+      icon_color: 'primary',
+      description: 'has paid $3100.00 for order no. <a href="#">#1214</a>',
+      date: '20 min ago',
+      comments: '4',
+      likes: '5'
+    },
+     {
+      user: 'Francis Smart',
+      icon_color: 'dark',
+      description: 'was added to company <a href="#">Themefy LTD</a>',
+      date: '2 hrs ago',
+      comments: '2',
+      likes: '1'
+    },
+    {
+      user: 'Samantha Ray',
+      icon_color: 'dark',
+      description: 'bought something',
+      date: '2 days ago',
+      comments: '21',
+      likes: '195'
+    },
+    {
+      user: 'Frank Ray',
+      icon_color: 'dark',
+      description: 'marked task <a href="#">#2218</a> as overdue',
+      date: '2 days ago',
+      comments: '21',
+      likes: '195'
+    }
+  ]
+%}
+
+{% block scripts %}
+<script>
+  $('.milestone-chart').each((index, element) => {
+    let ctx = element.getContext('2d')
+    let value1 = 60
+    let value2 = 100 - value1
+
+    new Chart(ctx, {
+      type: 'pie',
+      data: {
+        datasets: [{
+          data: [value1, value2],
+          borderWidth: 1,
+          backgroundColor: ['#ffffff', colors.color_bg]
+        }]
+      },
+      options: {
+        tooltips: { enabled: false },
+        cutoutPercentage: 85
+      }
+    })
+  });
+</script>
+{% endblock %}
