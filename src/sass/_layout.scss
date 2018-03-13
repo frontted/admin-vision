@@ -2,6 +2,10 @@
   padding-bottom: $grid-gutter-width;
 }
 
+.content-dashboard {
+  padding: 1rem 0;
+}
+
 .page-banner {
   height: 300px;
   background: theme-color('primary');
@@ -20,8 +24,7 @@
 }
 
 .text-muted {
-  opacity: 0.54;
-  color: theme-color('muted-color');
+  color: rgba(55, 57, 76, .54) !important;
 }
 
 .subscribe {

@@ -45,51 +45,6 @@ category: dashboard
   ]
 %}
 
-{%
-  set activities = [
-    {
-      user: 'Andrew Robles',
-      icon_color: 'primary',
-      description: 'completed task <a href="#">#8809</a>',
-      date: 'now',
-      comments: '2',
-      likes: '21'
-    },
-    {
-      user: 'Michael Fox',
-      icon_color: 'primary',
-      description: 'has paid $3100.00 for order no. <a href="#">#1214</a>',
-      date: '20 min ago',
-      comments: '4',
-      likes: '5'
-    },
-     {
-      user: 'Francis Smart',
-      icon_color: 'dark',
-      description: 'was added to company <a href="#">Themefy LTD</a>',
-      date: '2 hrs ago',
-      comments: '2',
-      likes: '1'
-    },
-    {
-      user: 'Samantha Ray',
-      icon_color: 'dark',
-      description: 'bought something',
-      date: '2 days ago',
-      comments: '21',
-      likes: '195'
-    },
-    {
-      user: 'Frank Ray',
-      icon_color: 'dark',
-      description: 'marked task <a href="#">#2218</a> as overdue',
-      date: '2 days ago',
-      comments: '21',
-      likes: '195'
-    }
-  ]
-%}
-
 {% block scripts %}
 <script>
   $('.milestone-chart').each((index, element) => {

@@ -1,27 +1,50 @@
-.content-fixed, .content-dashboard {
+.card {
+  .card-title {
+    font-weight: 400;
+    font-size: 1.5rem;
+    letter-spacing: 0.0625rem;
+    margin-bottom: 0;
+  }
+  .card-subtitle {
+    font-size: 0.875rem;
+    color: rgba(55, 57, 76, .54);
+    letter-spacing: 0.98px;
+    text-transform: uppercase;
+    margin-top: 0;
+  }
+}
+
+.content-fixed {
   .card-group {
     margin-bottom: $grid-gutter-width;
   }
   .card {
     margin-bottom: $grid-gutter-width;
-    .card-title {
-      font-weight: 400;
-      font-size: 1.5rem;
-      letter-spacing: 0.0625rem;
-      margin-bottom: 0;
-    }
-    .card-subtitle {
-      opacity: 0.54;
-      font-size: 0.875rem;
-      color: theme-color('muted-color');
-      letter-spacing: 0.98px;
-      text-transform: uppercase;
-      margin-top: 0;
-    }
-    &.card-dark {
-      background: theme-color('dark');
-      color: #ffffff;
-      border-radius: 8px;
+  }
+}
+
+.content-dashboard {
+  .card-deck {
+    .card {
+      margin-left: 0;
+      &:first-of-type {
+        margin-left: 1rem;
+      }
+      &:not(:last-of-type) {
+        margin-right: 1rem;
+      }
     }
   }
+  .card-group {
+    margin-bottom: 1rem;
+  }
+  .card {
+    margin-bottom: 1rem;
+  }
+}
+
+.card-dark {
+  background: theme-color('dark');
+  color: #ffffff;
+  border-radius: 8px;
 }

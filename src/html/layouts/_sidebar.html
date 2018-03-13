@@ -108,17 +108,45 @@
     <div class="drawer-heading">
       Recent Activity
     </div>
-    {% for activity in activities %}
-      <li class="drawer-menu-item">
-        <div class="activity-icon">
-          <i class="material-icons md-14 align-middle text-{{ activity.icon_color }}">lens</i>
-        </div>
-        <div class="activity-content">
-          <a href="#">{{ activity.user }}</a>
-          <span>{{ activity.description|safe }}</span>
-          <div class="text-muted">{{ activity.date }}</div>
-        </div>
-      </li>
-    {% endfor %}
+    <li class="drawer-menu-item">
+      <div class="activity-icon">
+        <i class="material-icons md-14 align-middle text-primary">lens</i>
+      </div>
+      <div class="activity-content">
+        <a href="#">Andrew Robles</a>
+        <span>completed task <a href="#">#8809</a></span>
+        <div class="text-muted">now</div>
+      </div>
+    </li>
+    <li class="drawer-menu-item">
+      <div class="activity-icon">
+        <i class="material-icons md-14 align-middle text-primary">lens</i>
+      </div>
+      <div class="activity-content">
+        <a href="#">Michael Fox</a>
+        <span>has paid &dollar;3100.00 for order no. <a href="#">#1214</a></span>
+        <div class="text-muted">20 mins ago</div>
+      </div>
+    </li>
+    <li class="drawer-menu-item">
+      <div class="activity-icon">
+        <i class="material-icons md-14 align-middle text-dark">lens</i>
+      </div>
+      <div class="activity-content">
+        <a href="#">Francis Smart</a>
+        <span>was hired to company <a href="#">Themefy LTD</a></span>
+        <div class="text-muted">2 hrs ago</div>
+      </div>
+    </li>
+    <li class="drawer-menu-item">
+      <div class="activity-icon">
+        <i class="material-icons md-14 align-middle text-dark">lens</i>
+      </div>
+      <div class="activity-content">
+        <a href="#">Samantha Ray</a>
+        <span>marked task <a href="#">#2218</a> as overdue</span>
+        <div class="text-muted">2 days ago</div>
+      </div>
+    </li>
   </ul>
 </nav>
