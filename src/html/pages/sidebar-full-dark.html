@@ -1,10 +1,12 @@
 ---
 title: Vision
-slug: dashboard
-category: dashboard
-navbarClass: navbar--primary
+slug: sidebar-full-dark
+category: sidebar-full-dark
+drawerClass: drawer--dark
+navbarClass: navbar--white
+contentClass: pt-0
 ---
-{% extends "layouts/default.html" %}
+{% extends "layouts/full-bleed.html" %}
 
 {%
   set orders = [
@@ -45,28 +47,3 @@ navbarClass: navbar--primary
     }
   ]
 %}
-
-{% block scripts %}
-<script>
-  $('.milestone-chart').each((index, element) => {
-    let ctx = element.getContext('2d')
-    let value1 = 60
-    let value2 = 100 - value1
-
-    new Chart(ctx, {
-      type: 'pie',
-      data: {
-        datasets: [{
-          data: [value1, value2],
-          borderWidth: 1,
-          backgroundColor: ['#ffffff', colors.color_bg]
-        }]
-      },
-      options: {
-        tooltips: { enabled: false },
-        cutoutPercentage: 85
-      }
-    })
-  });
-</script>
-{% endblock %}

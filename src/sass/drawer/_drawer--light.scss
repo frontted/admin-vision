@@ -11,40 +11,20 @@ $drawer-light-border: #DDE3EA;
 .drawer--light {
   border-right: 2px solid $drawer-light-border;
 
-  a { color: #000; }
-  .dropdown a { color: $body-color; }
-  .dropdown a.active, .dropdown a.active:hover { color: #000; }
-  .dropdown a:hover { color: theme-color('link-color') }
+  .drawer-heading { color: theme-color('text-color'); }
 
-  .dropdown {
-    .dropdown-menu .dropdown-item {
-      border-bottom: 1px solid $border-color;
-      &:last-of-type { border-bottom: 0; }
-      &.active {
-        color: #fff;
-      }
-    }
-    .dropdown-toggle {
-      width: 100%;
-      color: $body-color !important;
-      border-color: $drawer-light-border !important;
-      &.btn { background: #EFF4F8; }
-      &:hover, &:focus, &:active { text-decoration: none; }
-      &.btn {
-        &::after {
-          left: 90%;
-          top: 45%;
-          position: absolute;
-        }
-      }
-    }
-  }
-
-  .drawer-heading { color: $body-color; }
   .drawer-spacer {
     margin-bottom: 1.25rem;
-    .media .media-body > a { color: #212121; }
+    .media .media-body {
+      > a { color: theme-color('text-color'); }
+      > div small {
+        color: rgba(55, 57, 76, .54);
+        text-transform: uppercase;
+      }
+    }
     &.drawer-spacer-border { border-bottom: 1px solid $drawer-light-border; }
+
+    .material-icons { color: rgba(55, 57, 76, .54); }
   }
 
   .drawer-menu {
@@ -58,7 +38,7 @@ $drawer-light-border: #DDE3EA;
         }
       }
       a {
-        color: $body-color;
+        color: theme-color('text-color');
         .material-icons {
          color: rgba(55, 57, 76, .54);
        }

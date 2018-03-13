@@ -1,10 +1,9 @@
 ---
 title: Vision
-slug: index
-category: index
-navbarClass: navbar--white
+slug: sidebar-full-light
+category: sidebar-full-light
 ---
-{% extends "layouts/fixed.html" %}
+{% extends "layouts/full-bleed.html" %}
 
 {% block head %}
   <link type="text/css" href="assets/css/vendor-morris.css" rel="stylesheet">
@@ -88,28 +87,8 @@ navbarClass: navbar--white
 {% block scripts %}
 <script src="assets/vendor/morris.min.js"></script>
 <script src="assets/vendor/raphael.min.js"></script>
+
 <script>
-  $('.milestone-chart').each((index, element) => {
-    let ctx = element.getContext('2d')
-    let value1 = 60
-    let value2 = 100 - value1
-
-    new Chart(ctx, {
-      type: 'pie',
-      data: {
-        datasets: [{
-          data: [value1, value2],
-          borderWidth: 1,
-          backgroundColor: ['#ffffff', colors.color_bg]
-        }]
-      },
-      options: {
-        tooltips: { enabled: false },
-        cutoutPercentage: 85
-      }
-    })
-  });
-
   // Morris Sales Chart
   new Morris.Line({
     element: 'morris-sales-chart',
@@ -124,30 +103,6 @@ navbarClass: navbar--white
     ykeys: ['a', 'b', 'c'],
     labels: ['iPhone', 'Android', 'Other'],
     lineColors: [colors.color_primary, colors.color_success, colors.color_warning],
-    resize: true
-  });
-
-  new Morris.Area({
-    element: 'morris-main-chart',
-    data: [
-    { year: '2017-01', a: 6352.27},
-    { year: '2017-02', a: 4309.98},
-    { year: '2017-03', a: 1465.98},
-    { year: '2017-04', a: 1298.25},
-    { year: '2017-05', a: 3209},
-    { year: '2017-06', a: 2083},
-    { year: '2017-07', a: 1285.23},
-    { year: '2017-08', a: 1289},
-    { year: '2017-09', a: 4430},
-    { year: '2017-10', a: 8921.19}
-    ],
-    xkey: 'year',
-    ykeys: ['a'],
-    labels: ['Earnings'],
-    lineColors: ['#fff'],
-    fillOpacity: '0.2',
-    gridEnabled: true,
-    gridTextColor: '#ffffff',
     resize: true
   });
 </script>

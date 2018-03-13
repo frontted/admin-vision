@@ -4,6 +4,26 @@
   display: flex;
   align-items: center;
   z-index: 1;
+
+  &.navbar--primary {
+    background: theme-color('primary');
+    color: #ffffff;
+    .navbar-nav.navbar-right {
+      color: rgba(255, 255, 255, .54);
+    }
+  }
+
+  &.navbar--white {
+    background: #ffffff;
+    color: theme-color('text-color');
+    .text-light {
+      color: theme-color('text-color') !important;
+    }
+    .navbar-nav.navbar-right {
+      color: rgba(55, 57, 76, .24);
+    }
+  }
+
   &.navbar-fixed, &.navbar-main {
     .navbar-nav.navbar-right {
       align-items: center;
@@ -38,13 +58,6 @@
         }
       }
     }
-    .navbar-nav.navbar-right .nav-item {
-      color: rgba(55, 57, 76, .54);
-    }
-  }
-
-  &.navbar-main {
-    color: #ffffff;
   }
 }
 
@@ -54,4 +67,8 @@
   &::after {
     border: 0 !important;
   }
+}
+
+.mdk-header {
+  height: $navbar-height !important;
 }
