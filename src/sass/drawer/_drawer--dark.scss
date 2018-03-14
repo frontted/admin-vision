@@ -135,7 +135,7 @@ $drawer-dark-bg: theme-color("drawer-dark-bg");
           top: 8px;
           left: 8px;
           content: '';
-          border-left: 2px solid theme-color('border-color');
+          border-left: 2px solid rgba(0, 0, 0, .12);
           bottom: -30px;
         }
       }
@@ -153,8 +153,24 @@ $drawer-dark-bg: theme-color("drawer-dark-bg");
         margin-bottom: $spacer;
       }
 
+      .text-primary {
+        color: #ffffff !important;
+      }
+
+      .text-dark {
+        color: #424351 !important;
+      }
+
+      .text-muted {
+        color: rgba(255, 255, 255, .24) !important;
+      }
+
+      .activity-text {
+        color: rgba(255, 255, 255, .54);
+      }
+
       a {
-        color: theme-color('link-color');
+        color: #ffffff;
       }
     }
   }
