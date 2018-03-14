@@ -13,7 +13,10 @@
   <!-- main content -->
   <div class="top-navbar">
     {% include 'layouts/_navbar-fixed.html' %}
-    {% include 'layouts/_header-fixed.html' %}
+
+    {% if pageHeader %}
+      {% include 'layouts/_header-fixed.html' %}
+    {% endif %}
 
     <div class="content-fixed">
       {% block page %}
