@@ -3,6 +3,7 @@
 }
 
 .content-dashboard {
+  height: 100%;
   padding: 1rem 0;
 }
 
@@ -47,4 +48,8 @@
       margin-bottom: 2rem;
     }
   }
+}
+
+.h-vh {
+  height: 100vh;
 }

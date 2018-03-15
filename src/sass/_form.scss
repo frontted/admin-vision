@@ -1,0 +1,25 @@
+.input-group--inline {
+  position: relative;
+  .input-group-addon {
+    bottom: 3px;
+    position: absolute;
+    pointer-events: none;
+    vertical-align: middle;
+    z-index: 2;
+    padding: 0;
+    border: 0;
+    color: $body-color;
+    padding: 0 $spacer/2;
+     .material-icons {
+      color: $text-muted;
+    }
+  }
+  .form-control:not(:first-child) {
+    text-indent: $spacer * 1.5;
+    z-index: initial;
+    border-radius: 5px;
+    &:hover, &:focus, &:active {
+      z-index: initial;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+a.social {
+  text-align: center;
+  svg {
+    height: 100%;
+  }
+  &.social-facebook {
+    fill: theme-color('facebook');
+    &:hover {
+      fill: darken(theme-color('facebook'), 10%);
+    }
+  }
+  &.social-twitter {
+    fill: theme-color('twitter');
+    &:hover {
+      fill: darken(theme-color('twitter'), 10%);
+    }
+  }
+  &.social-instagram {
+    fill: theme-color('instagram');
+    &:hover {
+      fill: darken(theme-color('instagram'), 10%);
+    }
+  }
+  &.social-dribbble {
+    fill: theme-color('dribbble');
+    &:hover {
+      fill: darken(theme-color('dribbble'), 10%);
+    }
+  }
+}

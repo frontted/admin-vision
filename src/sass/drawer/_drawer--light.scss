@@ -8,6 +8,7 @@ $drawer-light-border: #DDE3EA;
 [position=right] .mdk-drawer__content .drawer--light, .mainContent + .apps--sidebar {
   border-left: 1px solid $drawer-light-border;
 }
+
 .drawer--light {
   border-right: 2px solid $drawer-light-border;
 
@@ -38,21 +39,18 @@ $drawer-light-border: #DDE3EA;
         }
       }
       a {
-        color: theme-color('text-color');
+        color: rgba(55, 57, 76, .54);
         .material-icons {
          color: rgba(55, 57, 76, .54);
        }
        &:hover {
         color:  $drawer-light-active-color;
-        text-decoration:none;
+        text-decoration: none;
         .material-icons { color:  $drawer-light-active-color; }
       }
     }
     &.active a {
-      color: $drawer-light-active-color;
-      .material-icons {
-        color: $drawer-light-active-color;
-      }
+      color: theme-color('text-color');
     }
     > ul > .drawer-menu-item {
         // LEFT SUBMENU BORDER
@@ -60,20 +58,23 @@ $drawer-light-border: #DDE3EA;
         &.active a { color:  $drawer-light-active-color; }
       }
       &.drawer-submenu {
-        background: $body-bg;
         [aria-expanded=true] {
-          color: theme-color('primary');
-          .material-icons { color: theme-color('primary'); }
+          color: theme-color('text-color');
+          border-left: .25rem solid theme-color('primary');
+          .material-icons { color: theme-color('text-color'); }
         }
         a[aria-expanded=false] {
           background: #ffffff;
         }
       }
     }
+    ul .collapse {
+      background: none;
+    }
   }
 
   .drawer-main {
-    padding: 0 $spacer;
+    padding: 0 .625rem;
     .drawer-menu-text {
       font-size: 1.125rem;
       letter-spacing: 0.0625rem;
@@ -100,7 +101,7 @@ $drawer-light-border: #DDE3EA;
         display: block;
         height: 40px;
         line-height:40px;
-        padding: 0 $spacer;
+        padding: 0 .625rem;
         text-decoration: none;
         .material-icons {
           position: absolute;
@@ -112,17 +113,17 @@ $drawer-light-border: #DDE3EA;
       a:hover { text-decoration:none; }
       > ul {
         list-style: none;
-        padding-left: $spacer;
-        padding-left:0;
-        background: rgba(0,0,0, .24);
+        padding-left: 0;
         border-top: 1px solid rgba(255,255,255, .05);
         border-bottom: 1px solid rgba(255,255,255, .05);
         > .drawer-menu-item {
-          border-bottom:0;
-          &:first-of-type { padding-top:10px; }
-          &:last-of-type { padding-bottom: 10px; }
+          &:first-of-type { padding-top: .625rem; }
+          &:last-of-type { padding-bottom: .625rem; }
 
           &.active a {
+            margin-left: .325rem;
+            border: 0;
+            color: theme-color('text-color');
             background: none;
           }
         }
@@ -131,7 +132,7 @@ $drawer-light-border: #DDE3EA;
   }
 
   .drawer-activity {
-    padding: 0 $spacer;
+    padding: 0 .625rem;
     .drawer-menu-item {
       margin-bottom: 1.25rem;
       &:not(:last-child) {
@@ -140,7 +141,7 @@ $drawer-light-border: #DDE3EA;
           top: 8px;
           left: 8px;
           content: '';
-          border-left: 2px solid theme-color('border-color');
+          border-left: 2px solid $drawer-light-border;
           bottom: -30px;
         }
       }
@@ -166,7 +167,7 @@ $drawer-light-border: #DDE3EA;
 
   .drawer-stats {
     background: #F9F9F9;
-    padding: $spacer;
+    padding: .625rem;
     .drawer-menu-item {
       margin-bottom: .625rem;
       .drawer-menu-text {

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>{{ title }}</title>
+
+  {% block head %}{% endblock %}
+  {% include 'layouts/_header.html' %}
+
+</head>
+<body>
+  <div class="content-blank">
+    {% block page %}
+      {% include 'partials/page.' + slug + '.html' ignore missing %}
+    {% endblock %}
+  </div>
+
+  {% block scripts %}{% endblock %}
+
+</body>
+</html>

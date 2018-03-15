@@ -48,7 +48,7 @@ $drawer-dark-bg: theme-color("drawer-dark-bg");
   }
 
   .drawer-main {
-    padding: 0 $spacer;
+    padding: 0 .625rem;
 
     .drawer-menu-text {
       font-size: 1.125rem;
@@ -64,7 +64,7 @@ $drawer-dark-bg: theme-color("drawer-dark-bg");
         display: block;
         height: 40px;
         line-height: 40px;
-        padding: 0 $spacer;
+        padding: 0 .625rem;
         .material-icons {
           position: absolute;
           line-height: 40px;
@@ -84,7 +84,7 @@ $drawer-dark-bg: theme-color("drawer-dark-bg");
       > ul {
         list-style: none;
         padding-left: $spacer;
-        padding-left:0;
+        padding-left: 0;
         background: rgba(0,0,0, .24);
         border-top: 1px solid rgba(255,255,255, .05);
         border-bottom: 1px solid rgba(255,255,255, .05);
@@ -105,7 +105,7 @@ $drawer-dark-bg: theme-color("drawer-dark-bg");
     background: rgba(249, 249, 249, .11);
     border-top: 2px solid $drawer-dark-border;
     border-bottom: 2px solid $drawer-dark-border;
-    padding: $spacer;
+    padding: .625rem;
     .drawer-menu-item {
       margin-bottom: .625rem;
       .drawer-menu-text {
@@ -126,7 +126,7 @@ $drawer-dark-bg: theme-color("drawer-dark-bg");
   }
 
   .drawer-activity {
-    padding: 0 $spacer;
+    padding: 0 .625rem;
     .drawer-menu-item {
       margin-bottom: 1.25rem;
       &:not(:last-child) {

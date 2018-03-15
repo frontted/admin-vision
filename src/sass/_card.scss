@@ -48,3 +48,38 @@
   color: #ffffff;
   border-radius: 8px;
 }
+
+.card.card-lesson {
+  color: #ffffff;
+  margin-bottom: $grid-gutter-width;
+  .card-img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .info {
+    font-weight: bold;
+    font-size: .7rem;
+    text-transform: uppercase;
+    color: #919499;
+  }
+  .card-img {
+    filter: brightness(30%);
+  }
+  &:hover {
+   .card-img-overlay {
+    transition: .5s;
+    opacity: 0;
+  }
+  .card-img {
+    transition: .5s;
+    filter: brightness(100%);
+  }
+}
+}

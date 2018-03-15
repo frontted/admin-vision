@@ -2,8 +2,7 @@
 <nav class="drawer {{ drawerClass if drawerClass else 'drawer--light' }}">
   <div class="drawer-spacer drawer-spacer-border">
     <div class="media align-items-center">
-      <img src="https://pbs.twimg.com/profile_images/928893978266697728/3enwe0fO_400x400.jpg" class="img-fluid rounded-circle mr-2" width="50"
-      alt="">
+      <span class="mr-2">{% include 'layouts/_logo.html' %}</span>
       <div class="media-body">
         <a href="index.html" class="h5 m-0">Frontted</a>
         <div>
@@ -26,7 +25,7 @@
 
   <!-- MAIN MENU -->
   <ul class="drawer-menu drawer-main" id="mainMenu" data-children=".drawer-submenu">
-    <li class="drawer-menu-item active">
+    <li class="drawer-menu-item {% if slug == 'dashboard' %}active {% endif %}">
       <a href="dashboard.html">
         <span class="drawer-menu-text">Dashboard</span>
       </a>
@@ -47,9 +46,18 @@
         <span class="drawer-menu-text">Pages</span>
       </a>
       <ul class="collapse {% if category == 'pages' %}show {% endif %}" id="pagesMenu">
-        <li class="drawer-menu-item"><a href="#">Page 1</a></li>
-        <li class="drawer-menu-item"><a href="#">Page 2</a></li>
-        <li class="drawer-menu-item"><a href="#">Page 3</a></li>
+        <li class="drawer-menu-item {% if slug == 'account' %}active {% endif %}"><a href="account.html">Account</a></li>
+        <li class="drawer-menu-item {% if slug == 'activity-timeline' %}active {% endif %}"><a href="activity-timeline.html">Activity Timeline</a></li>
+        <li class="drawer-menu-item {% if slug == 'blog-post' %}active {% endif %}"><a href="blog-post.html">Blog Post</a></li>
+        <li class="drawer-menu-item {% if slug == 'error' %}active {% endif %}"><a href="error.html">Error</a></li>
+        <li class="drawer-menu-item {% if slug == 'invoice' %}active {% endif %}"><a href="invoice.html">Invoice</a></li>
+        <li class="drawer-menu-item {% if slug == 'pricing' %}active {% endif %}"><a href="pricing.html">Pricing</a></li>
+        <li class="drawer-menu-item {% if slug == 'lessons' %}active {% endif %}"><a href="lessons.html">Lessons</a></li>
+        <li class="drawer-menu-item {% if slug == 'lessons-2' %}active {% endif %}"><a href="lessons-2.html">Lessons 2</a></li>
+        <li class="drawer-menu-item {% if slug == 'learning' %}active {% endif %}"><a href="learning.html">Learning</a></li>
+        <li class="drawer-menu-item {% if slug == 'login' %}active {% endif %}"><a href="login.html">Login</a></li>
+        <li class="drawer-menu-item {% if slug == 'sigup' %}active {% endif %}"><a href="sigup.html">Sign Up</a></li>
+        <li class="drawer-menu-item {% if slug == 'forgot-password' %}active {% endif %}"><a href="forgot-password.html">Forgot Password</a></li>
       </ul>
     </li>
     <li class="drawer-menu-item drawer-submenu">
