@@ -1,0 +1,26 @@
+.ui-grid {
+  .row {
+    margin: 0;
+  }
+
+  .example-grid-col {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    background-color: rgba(theme-color('primary'), .15);
+    border: 1px solid rgba(theme-color('primary'), .24);
+  }
+
+  .example-row {
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .example-row-flex-cols {
+    min-height: 10rem;
+    background-color: theme-color('body-bg');
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+}

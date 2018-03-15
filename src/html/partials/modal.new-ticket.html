@@ -1,0 +1,42 @@
+<div class="modal fade" id="newTicketModal" tabindex="-1" role="dialog" aria-labelledby="newTicketModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="newTicketModalLabel">Add a new ticket</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <div class="form-group">
+            <label for="description" class="mr-1">Description</label>
+            <input type="text" class="form-control" name="description" id="description" placeholder="Ticket description">
+          </div>
+          <div class="form-group">
+            <label for="description" class="mr-1">Status</label>
+            <select class="custom-select form-control">
+              <option selected>None</option>
+              <option value="1">Resolved</option>
+              <option value="2">Active</option>
+              <option value="3">Closed</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="description" class="mr-1">Milestone</label>
+            <select class="custom-select form-control">
+              <option selected>None</option>
+              <option value="1">Initial Release</option>
+              <option value="2">Alpha Release</option>
+              <option value="3">Bug Fixes</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Add ticket</button>
+      </div>
+    </div>
+  </div>
+</div>
