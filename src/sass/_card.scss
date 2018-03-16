@@ -13,6 +13,9 @@
     text-transform: uppercase;
     margin-top: 0;
   }
+  &.card-auth {
+    width: 50%;
+  }
 }
 
 .card-deck .card {
@@ -70,4 +73,10 @@
     filter: brightness(100%);
   }
 }
+}
+
+@include media-breakpoint-down(md) {
+  .card.card-auth {
+    width: 100%;
+  }
 }
