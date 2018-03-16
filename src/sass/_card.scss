@@ -1,4 +1,5 @@
 .card {
+  margin-bottom: $spacer;
   .card-title {
     font-weight: 400;
     font-size: 1.5rem;
@@ -14,21 +15,20 @@
   }
 }
 
-.content-fixed {
-  .card-group {
-    margin-bottom: $grid-gutter-width;
-  }
-  .card {
-    margin-bottom: $grid-gutter-width;
-  }
+.card-deck .card {
+  margin-bottom: $spacer;
+}
+
+.content-fixed .card-group {
+  margin-bottom: $spacer;
 }
 
 .content-dashboard {
   .card-group {
-    margin-bottom: 1rem;
+    margin-bottom: $spacer;
   }
   .card {
-    margin-bottom: 1rem;
+    margin-bottom: $spacer;
   }
 }
 
@@ -40,7 +40,6 @@
 
 .card.card-lesson {
   color: #ffffff;
-  margin-bottom: $grid-gutter-width;
   .card-img-overlay {
     position: absolute;
     top: 0;

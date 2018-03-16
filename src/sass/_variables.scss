@@ -7,10 +7,6 @@ $table-head-color: $body-color;
 $table-border-color: $border-color;
 $table-accent-bg: $body-bg;
 
-$card-border-radius: 0px;
-$card-cap-bg: transparent;
-$card-border-color: $border-color;
-
 $navbar-light-color: $body-color;
 $navbar-light-active-color: $blue;
 
@@ -80,3 +76,8 @@ $grid-gutter-width : 2rem !default;
 $spacer-xs: 1.25rem !default;
 $spacer: $grid-gutter-width !default;
 $spacer-lg : $spacer * 1.2 !default;
+
+// Cards
+$card-border-radius: 0px;
+$card-cap-bg: transparent;
+$card-border-color: $border-color;
