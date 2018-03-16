@@ -12,19 +12,30 @@
 </head>
 <body>
   <!-- main content -->
-  <div class="top-navbar">
     {% include 'layouts/_navbar-fixed.html' %}
 
     {% if pageHeader %}
       {% include 'layouts/_header-fixed.html' %}
     {% endif %}
 
-    <div class="content-fixed">
-      {% block page %}
-        {% include 'partials/page.' + slug + '.html' ignore missing %}
-      {% endblock %}
+    <div class="mdk-drawer-layout js-mdk-drawer-layout" data-fullbleed data-push data-has-scrolling-region>
+      <div class="mdk-drawer-layout__content mdk-header-layout__content--scrollable">
+        <div class="content-fixed">
+          {% block page %}
+            {% include 'partials/page.' + slug + '.html' ignore missing %}
+          {% endblock %}
+        </div>
+      </div>
     </div>
-  </div>
+
+    <!-- drawer -->
+    <div class="mdk-drawer js-mdk-drawer" id="default-drawer" {% if drawerRight == true %} data-position="right" data-align="end" {% endif %}>
+      <div class="mdk-drawer__content mdk-drawer-top-navbar">
+        <div class="mdk-drawer__inner" data-simplebar data-simplebar-force-enabled="true">
+          {% include 'layouts/_sidebar.html' %}
+        </div>
+      </div>
+    </div>
 
   <!-- jQuery -->
   <script src="assets/vendor/jquery.min.js"></script>
@@ -44,6 +55,28 @@
 
   <script src="assets/vendor/dom-factory.js"></script> <!-- DOM Factory -->
   <script src="assets/vendor/material-design-kit.js"></script> <!-- MDK -->
+
+  <script>
+    (function () {
+     'use strict';
+      // Self Initialize DOM Factory Components
+      domFactory.handler.autoInit()
+
+
+      // Connect button(s) to drawer(s)
+      var sidebarToggle = document.querySelectorAll('[data-toggle="sidebar"]')
+
+      sidebarToggle.forEach(function (toggle) {
+        toggle.addEventListener('click', function (e) {
+          var selector = e.currentTarget.getAttribute('data-target') || '#default-drawer'
+          var drawer = document.querySelector(selector)
+          if (drawer) {
+            drawer.mdkDrawer.toggle();
+          }
+        })
+      })
+    })()
+  </script>
 
   {% block scripts %}{% endblock %}
 

@@ -22,3 +22,9 @@
     color: rgba(88, 89, 105, .54);
   }
 }
+
+@include media-breakpoint-down(sm) {
+  .btn-search {
+    display: none;
+  }
+}

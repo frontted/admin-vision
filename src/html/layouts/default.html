@@ -79,20 +79,11 @@
           var selector = e.currentTarget.getAttribute('data-target') || '#default-drawer'
           var drawer = document.querySelector(selector)
           if (drawer) {
-            if (selector == '#default-drawer') {
-              $('.container-fluid').toggleClass('container--max');
-            }
             drawer.mdkDrawer.toggle();
           }
-          morrisDashboardChart.redraw();
         })
       })
-
-
-
     })()
-
-
   </script>
 
   {% block scripts %}{% endblock %}

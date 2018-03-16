@@ -1,9 +1,33 @@
+.mdk-drawer-top-navbar {
+  margin-top: $navbar-height;
+}
+.top-navbar {
+  padding-top: $navbar-height;
+}
+
+.ls-top-navbar {
+  padding-top: calc(#{$navbar-height} + #{$grid-gutter-width});
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-only($breakpoint) {
+    .ls-top-navbar-#{$breakpoint} {
+      top: $navbar-height !important;
+    }
+  }
+  @include media-breakpoint-up($breakpoint) {
+    .ls-top-navbar-#{$breakpoint}-up {
+      top: $navbar-height !important;
+    }
+  }
+}
+
 .navbar {
   background: #ffffff;
   height: $navbar-height;
   display: flex;
   align-items: center;
-  z-index: 1;
+  z-index: 5;
 
   &.navbar--primary {
     background: theme-color('primary');
@@ -17,6 +41,9 @@
           color: rgba(255, 255, 255, 1) !important;
         }
       }
+    }
+    .navbar-toggler {
+      color: rgba(255, 255, 255, 1);
     }
   }
 
@@ -36,6 +63,9 @@
         }
       }
     }
+    .navbar-toggler {
+      color: theme-color('primary');
+    }
   }
 
   &.navbar-fixed, &.navbar-main {
@@ -50,6 +80,7 @@
     }
   }
   &.navbar-fixed {
+    border-bottom: 1px solid theme-color('border-color');
     .navbar-nav.navbar-center {
       width: 100%;
       justify-content: center;
