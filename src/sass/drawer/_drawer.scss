@@ -85,3 +85,13 @@ nav.drawer {
 .bg-primary .drawer-brand-circle {
   background: theme-color('primary-dark');
 }
+
+@media print {
+  .mdk-drawer__content {
+    width: 0;
+  }
+  .mdk-drawer-layout__content {
+    transform: none !important;
+    margin-right: 0 !important;
+  }
+}
