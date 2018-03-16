@@ -8,6 +8,7 @@
 }
 
 .page-banner {
+  margin-top: $navbar-height;
   height: 300px;
   background: theme-color('primary');
   text-align: center;
