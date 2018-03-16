@@ -9,7 +9,14 @@
     background: theme-color('primary');
     color: #ffffff;
     .navbar-nav.navbar-right {
-      color: rgba(255, 255, 255, .54);
+      .dropdown-toggle {
+        color: rgba(255, 255, 255, .54);
+      }
+      .dropdown.show {
+        .dropdown-toggle {
+          color: rgba(255, 255, 255, 1) !important;
+        }
+      }
     }
   }
 
@@ -20,7 +27,14 @@
       color: theme-color('text-color') !important;
     }
     .navbar-nav.navbar-right {
-      color: rgba(55, 57, 76, .24);
+      .dropdown-toggle {
+        color: rgba(55, 57, 76, .24);
+      }
+      .dropdown.show {
+        .dropdown-toggle {
+          color: theme-color('primary') !important;
+        }
+      }
     }
   }
 
@@ -64,6 +78,7 @@
   text-decoration: none;
   &::after {
     border: 0 !important;
+    content: none;
   }
 }
 
