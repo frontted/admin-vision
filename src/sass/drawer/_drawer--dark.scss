@@ -1,12 +1,48 @@
 $drawer-dark-active-color: #ffffff;
 $drawer-dark-border: rgba(239, 239, 239, .3);
 $drawer-dark-bg: theme-color("drawer-dark-bg");
+$active-border-width: .25rem;
 
 .drawer--dark {
   background: $drawer-dark-bg;
   color: #ffffff;
 
   .drawer-heading { color: #ffffff; }
+
+  .drawer-menu {
+    padding: 0 .625rem;
+    > .drawer-menu-item {
+      .drawer-menu-text {
+        text-transform: uppercase;
+      }
+      a {
+        color: rgba(255, 255, 255, .54);
+        .material-icons {
+          color: rgba(255, 255, 255, .54);
+        }
+        &:hover {
+          color:  $drawer-dark-active-color;
+          text-decoration:none;
+          .material-icons { color:  $drawer-dark-active-color; }
+        }
+        &.active {
+          color: $drawer-dark-active-color;
+          .material-icons {
+            color: $drawer-dark-active-color;
+          }
+        }
+      }
+      &.drawer-submenu {
+        [aria-expanded=true] {
+          color: #ffffff;
+          .material-icons { color: #ffffff; }
+        }
+      }
+    }
+    ul .collapse {
+      background: none;
+    }
+  }
 
   .drawer-spacer {
     margin-bottom: 1.25rem;
@@ -22,78 +58,40 @@ $drawer-dark-bg: theme-color("drawer-dark-bg");
     .material-icons { color: rgba(255, 255, 255, .54); }
   }
 
-  .drawer-menu {
-    > .drawer-menu-item {
-      .drawer-menu-text {
-        text-transform: uppercase;
-      }
-      a {
-        color: rgba(255, 255, 255, .54);
-        .material-icons {
-          color: rgba(255, 255, 255, .54);
-        }
-        &:hover {
-          color:  $drawer-dark-active-color;
-          text-decoration:none;
-          .material-icons { color:  $drawer-dark-active-color; }
-        }
-      }
-      &.active a {
-        color: $drawer-dark-active-color;
-        .material-icons {
-          color: $drawer-dark-active-color;
-        }
-      }
-    }
-  }
-
   .drawer-main {
-    padding: 0 .625rem;
-
     .drawer-menu-text {
       font-size: 1.125rem;
       letter-spacing: 0.0625rem;
     }
-
     .drawer-menu-item {
-      &.active a { color: #ffffff; }
-      background: transparent;
+      &.active {
+        padding-left: .625rem;
+        border-left: $active-border-width solid theme-color('primary');
+      }
+      &:not(.active) {
+        padding-left: .625rem + $active-border-width;
+      }
       a {
-        text-decoration: none;
-        font-weight: 400;
         display: block;
         height: 40px;
-        line-height: 40px;
-        padding: 0 .625rem;
+        line-height:40px;
+        text-decoration: none;
         .material-icons {
           position: absolute;
           line-height: 40px;
           top: 0px;
         }
-        &:hover { text-decoration: none; }
+        &:hover { text-decoration:none; }
       }
 
-      &:not(.active) {
-        margin-left: .25rem;
-      }
-      &.active a {
-        border-left: .25rem solid theme-color('primary');
-      }
-
-      a:hover { text-decoration: none; }
+      // Submenu
       > ul {
         list-style: none;
-        padding-left: $spacer;
         padding-left: 0;
-        background: rgba(0,0,0, .24);
-        border-top: 1px solid rgba(255,255,255, .05);
-        border-bottom: 1px solid rgba(255,255,255, .05);
         > .drawer-menu-item {
-          border-bottom:0;
-          &:first-of-type { padding-top:10px; }
-          &:last-of-type { padding-bottom: 10px; }
-
           &.active a {
+            border: 0;
+            color: #ffffff;
             background: none;
           }
         }

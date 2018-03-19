@@ -1,5 +1,6 @@
 $drawer-light-active-color: theme-color("primary");
 $drawer-light-border: #DDE3EA;
+$active-border-width: .25rem;
 
 [position=left] .mdk-drawer__content .drawer--light {
   border-right: 1px solid $drawer-light-border;
@@ -13,6 +14,38 @@ $drawer-light-border: #DDE3EA;
   border-right: 2px solid $drawer-light-border;
 
   .drawer-heading { color: theme-color('text-color'); }
+
+  .drawer-menu {
+    padding: 0 .625rem;
+    > .drawer-menu-item {
+      .drawer-menu-text {
+        text-transform: uppercase;
+      }
+      a {
+        color: rgba(55, 57, 76, .54);
+        .material-icons {
+          color: rgba(55, 57, 76, .54);
+        }
+        &:hover {
+          color:  $drawer-light-active-color;
+          text-decoration: none;
+          .material-icons { color: $drawer-light-active-color; }
+        }
+        &.active {
+          color: theme-color('text-color');
+        }
+      }
+      &.drawer-submenu {
+        [aria-expanded=true] {
+          color: theme-color('text-color');
+          .material-icons { color: theme-color('text-color'); }
+        }
+      }
+    }
+    ul .collapse {
+      background: none;
+    }
+  }
 
   .drawer-spacer {
     margin-bottom: 1.25rem;
@@ -28,59 +61,23 @@ $drawer-light-border: #DDE3EA;
     .material-icons { color: rgba(55, 57, 76, .54); }
   }
 
-  .drawer-menu {
-    > .drawer-menu-item {
-      .drawer-menu-text {
-        text-transform: uppercase;
-      }
-      [data-toggle=collapse] {
-        &.collapsed::after {
-          color: rgba(55, 57, 76, .54);
-        }
-      }
-      a {
-        color: rgba(55, 57, 76, .54);
-        .material-icons {
-         color: rgba(55, 57, 76, .54);
-       }
-       &:hover {
-        color:  $drawer-light-active-color;
-        text-decoration: none;
-        .material-icons { color:  $drawer-light-active-color; }
-      }
-    }
-    &.active a {
-      color: theme-color('text-color');
-    }
-    > ul > .drawer-menu-item {
-        // LEFT SUBMENU BORDER
-        &:after, a:after,  { background: $body-color; }
-        &.active a { color:  $drawer-light-active-color; }
-      }
-      &.drawer-submenu {
-        [aria-expanded=true] {
-          color: theme-color('text-color');
-          border-left: .25rem solid theme-color('primary');
-          .material-icons { color: theme-color('text-color'); }
-        }
-        a[aria-expanded=false] {
-          background: #ffffff;
-        }
-      }
-    }
-    ul .collapse {
-      background: none;
-    }
-  }
-
   .drawer-main {
-    padding: 0 .625rem;
     .drawer-menu-text {
       font-size: 1.125rem;
       letter-spacing: 0.0625rem;
     }
     .drawer-menu-item {
+      &.active {
+        padding-left: .625rem;
+        border-left: $active-border-width solid theme-color('primary');
+      }
+      &:not(.active) {
+        padding-left: .625rem + $active-border-width;
+      }
       a {
+        display: block;
+        height: 40px;
+        line-height:40px;
         text-decoration: none;
         .material-icons {
           position: absolute;
@@ -90,38 +87,12 @@ $drawer-light-border: #DDE3EA;
         &:hover { text-decoration:none; }
       }
 
-      &:not(.active) {
-        margin-left: .25rem;
-      }
-      &.active a {
-        border-left: .25rem solid theme-color('primary');
-      }
-
-      a {
-        display: block;
-        height: 40px;
-        line-height:40px;
-        padding: 0 .625rem;
-        text-decoration: none;
-        .material-icons {
-          position: absolute;
-          line-height: 40px;
-          top: 0px;
-        }
-      }
-
-      a:hover { text-decoration:none; }
+      // Submenu
       > ul {
         list-style: none;
         padding-left: 0;
-        border-top: 1px solid rgba(255,255,255, .05);
-        border-bottom: 1px solid rgba(255,255,255, .05);
         > .drawer-menu-item {
-          &:first-of-type { padding-top: .625rem; }
-          &:last-of-type { padding-bottom: .625rem; }
-
           &.active a {
-            margin-left: .325rem;
             border: 0;
             color: theme-color('text-color');
             background: none;
@@ -132,7 +103,6 @@ $drawer-light-border: #DDE3EA;
   }
 
   .drawer-activity {
-    padding: 0 .625rem;
     .drawer-menu-item {
       margin-bottom: 1.25rem;
       &:not(:last-child) {
