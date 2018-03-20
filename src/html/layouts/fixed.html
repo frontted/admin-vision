@@ -23,7 +23,7 @@
       {% include 'layouts/_header-fixed.html' %}
     {% endif %}
 
-    <div class="content-fixed">
+    <div class="content-fixed {{ pageClass if pageClass }}">
       {% block page %}
         {% include 'partials/page.' + slug + '.html' ignore missing %}
       {% endblock %}

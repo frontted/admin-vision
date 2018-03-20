@@ -6,7 +6,10 @@
   margin-top: $navbar-height;
 }
 .top-navbar {
-  padding-top: $navbar-height;
+  padding-top: $navbar-height + 20px;
+  &--soft {
+    padding-top: $navbar-height;
+  }
 }
 
 .ls-top-navbar {
@@ -84,6 +87,9 @@
     }
   }
   &.navbar-fixed {
+    .navbar-brand {
+      color: theme-color('text-color')
+    }
     .navbar-nav.navbar-center {
       width: 100%;
       justify-content: center;
