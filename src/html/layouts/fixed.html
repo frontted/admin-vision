@@ -11,8 +11,13 @@
   {% include 'layouts/_header.html' %}
 </head>
 <body>
-  <!-- main content -->
-    {% include 'layouts/_navbar-fixed.html' %}
+    <!-- main content -->
+    <div id="header" class="mdk-header js-mdk-header navbar-dark bg-primary mdk-header--h-64 mdk-header--fixed"
+    data-effects="waterfall" data-fixed>
+      <div class="mdk-header__content">
+        {% include 'layouts/_navbar-fixed.html' %}
+      </div>
+    </div>
 
     {% if pageHeader %}
       {% include 'layouts/_header-fixed.html' %}

@@ -1,3 +1,7 @@
+.mdk-header {
+  z-index:1032;
+}
+
 .mdk-drawer-top-navbar {
   margin-top: $navbar-height;
 }
@@ -80,7 +84,6 @@
     }
   }
   &.navbar-fixed {
-    border-bottom: 1px solid theme-color('border-color');
     .navbar-nav.navbar-center {
       width: 100%;
       justify-content: center;
