@@ -23,6 +23,13 @@
   }
 }
 
+.btn-dark-transparent {
+  text-transform: uppercase;
+  background: rgba(1, 1, 1, .24);
+  border-radius: 5px;
+  color: #FFFFFF;
+}
+
 @include media-breakpoint-down(sm) {
   .btn-search {
     display: none;
