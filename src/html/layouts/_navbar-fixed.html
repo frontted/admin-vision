@@ -51,13 +51,14 @@
           <a href="ui-typography.html" class="dropdown-item {% if slug == 'ui-typography' %}active {% endif %}">Typography</a>
           <a href="ui-drag-drop.html" class="dropdown-item {% if slug == 'ui-drag-drop' %}active {% endif %}">Drag &amp; Drop</a>
           <a href="ui-tables.html" class="dropdown-item {% if slug == 'ui-tables' %}active {% endif %}">Tables</a>
+          <a href="ui-navs.html" class="dropdown-item {% if slug == 'ui-navs' %}active {% endif %}">Navs</a>
           <a href="ui-notifications.html" class="dropdown-item {% if slug == 'ui-notifications' %}active {% endif %}">Notifications</a>
           <a href="ui-loaders.html" class="dropdown-item {% if slug == 'ui-loaders' %}active {% endif %}">Loaders</a>
         </div>
       </li>
     </ul>
     <ul class="navbar-nav navbar-right">
-      <li class="nav-item nav-emails">
+      <li class="nav-item nav-dropdown">
         <div class="dropdown">
           <a class="dropdown-toggle dropdown-clear-caret" href="#" id="emailsNavDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="material-icons align-middle">email</i>
@@ -71,7 +72,7 @@
         </div>
       </li>
 
-      <li class="nav-item nav-emails">
+      <li class="nav-item nav-dropdown">
         <div class="dropdown">
           <a class="dropdown-toggle dropdown-clear-caret" href="#" id="messagessNavDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="material-icons align-middle">message</i>
@@ -85,16 +86,43 @@
         </div>
       </li>
 
-      <li class="nav-item nav-emails">
+      <li class="nav-item nav-dropdown">
         <div class="dropdown">
-          <a class="dropdown-toggle dropdown-clear-caret" href="#" id="notificationsNavDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="material-icons align-middle">notifications</i>
+          <a class="dropdown-toggle dropdown-clear-caret" href="#" id="messagessNavDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="material-icons align-middle">message</i>
           </a>
 
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="notificationsNavDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="messagessNavDropdown">
+            <div class="dropdown-head">
+              <div class="dropdown-head--inner">
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                  <div>Notifications</div>
+                  <i class="material-icons align-middle">search</i>
+                </div>
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
+                      <i class="material-icons align-middle">home</i>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">
+                      <i class="material-icons align-middle">error_outline</i>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">
+                      <i class="material-icons align-middle">people</i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="tab-content" id="myTabContent">
+              <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
+              <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+              <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+            </div>
           </div>
         </div>
       </li>
