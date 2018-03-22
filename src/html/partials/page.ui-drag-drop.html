@@ -1,18 +1,19 @@
-<div class="container-fluid bg-white">
-  <h2>Drag &amp; Drop</h2>
-  <p class="lead">
-    Move cards between containers and more.
-  </p>
-  <hr>
-  <div class="card">
-    <div class="card-header">
-      <h4 class="card-title">Default</h4>
-    </div>
-    <div class="card-body bg-body-bg">
-      <div class="row">
-        <div class="col-md-6 drag-container">
-          <div class="card-columns" id="left">
-            {% for item in lefts %}
+<div class="bg-white">
+  <div class="container container--wide">
+    <h2>Drag &amp; Drop</h2>
+    <p class="lead">
+      Move cards between containers and more.
+    </p>
+    <hr>
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">Default</h4>
+      </div>
+      <div class="card-body bg-body-bg">
+        <div class="row">
+          <div class="col-md-6 drag-container">
+            <div class="card-columns" id="left">
+              {% for item in lefts %}
 
               <div class="card">
                 <img src="{{ item.image }}" alt="" class="card-img-top">
@@ -20,144 +21,144 @@
                   {{ item.content }}
                 </div>
               </div>
-            {% endfor %}
+              {% endfor %}
+            </div>
           </div>
-        </div>
-        <div class="col-md-6 drag-container">
-          <div class="card-columns" id="right">
-            {% for item in right %}
+          <div class="col-md-6 drag-container">
+            <div class="card-columns" id="right">
+              {% for item in right %}
               <div class="card">
                 <img src="{{ item.image }}" alt="" class="card-img-top">
                 <div class="card-body">
                   {{ item.content | safe }}
                 </div>
               </div>
-            {% endfor %}
+              {% endfor %}
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="card">
-    <div class="card-header">
-      <h4 class="card-title">Highlight</h4>
-    </div>
-    <div class="card-body bg-body-bg">
-      <div class="row">
-        <div class="col-md-6 drag-container">
-          <div class="row" id="left-highlight">
-            {% for item in lefts %}
-            <div class="col-md-4">
-              <div class="card">
-                <img src="{{ item.image }}" alt="" class="card-img-top">
-                <div class="card-body">
-                  {{ item.content }}
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">Highlight</h4>
+      </div>
+      <div class="card-body bg-body-bg">
+        <div class="row">
+          <div class="col-md-6 drag-container">
+            <div class="row" id="left-highlight">
+              {% for item in lefts %}
+              <div class="col-md-4">
+                <div class="card">
+                  <img src="{{ item.image }}" alt="" class="card-img-top">
+                  <div class="card-body">
+                    {{ item.content }}
+                  </div>
                 </div>
               </div>
+              {% endfor %}
             </div>
-            {% endfor %}
           </div>
-        </div>
-        <div class="col-md-6 drag-container">
-          <div class="row" id="right-highlight">
-            {% for item in right %}
-            <div class="col-md-4">
-              <div class="card">
-                <img src="{{ item.image }}" alt="" class="card-img-top">
-                <div class="card-body">
-                  {{ item.content | safe }}
+          <div class="col-md-6 drag-container">
+            <div class="row" id="right-highlight">
+              {% for item in right %}
+              <div class="col-md-4">
+                <div class="card">
+                  <img src="{{ item.image }}" alt="" class="card-img-top">
+                  <div class="card-body">
+                    {{ item.content | safe }}
+                  </div>
                 </div>
               </div>
+              {% endfor %}
             </div>
-            {% endfor %}
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="card">
-    <div class="card-header">
-      <h4 class="card-title">Remove on spill</h4>
-    </div>
-    <div class="card-body bg-body-bg">
-      <div class="row">
-        <div class="col-md-6 drag-container">
-          <div class="row" id="left-spill">
-            {% for item in lefts %}
-            <div class="col-md-4">
-              <div class="card">
-                <img src="{{ item.image }}" alt="" class="card-img-top">
-                <div class="card-body">
-                  {{ item.content }}
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">Remove on spill</h4>
+      </div>
+      <div class="card-body bg-body-bg">
+        <div class="row">
+          <div class="col-md-6 drag-container">
+            <div class="row" id="left-spill">
+              {% for item in lefts %}
+              <div class="col-md-4">
+                <div class="card">
+                  <img src="{{ item.image }}" alt="" class="card-img-top">
+                  <div class="card-body">
+                    {{ item.content }}
+                  </div>
                 </div>
               </div>
+              {% endfor %}
             </div>
-            {% endfor %}
           </div>
-        </div>
-        <div class="col-md-6 drag-container">
-          <div class="row" id="right-spill">
-            {% for item in right %}
-            <div class="col-md-4">
-              <div class="card">
-                <img src="{{ item.image }}" alt="" class="card-img-top">
-                <div class="card-body">
-                  {{ item.content | safe }}
+          <div class="col-md-6 drag-container">
+            <div class="row" id="right-spill">
+              {% for item in right %}
+              <div class="col-md-4">
+                <div class="card">
+                  <img src="{{ item.image }}" alt="" class="card-img-top">
+                  <div class="card-body">
+                    {{ item.content | safe }}
+                  </div>
                 </div>
               </div>
+              {% endfor %}
             </div>
-            {% endfor %}
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="card">
-    <div class="card-header">
-      <h4 class="card-title">Revert on spill</h4>
-    </div>
-    <div class="card-body bg-body-bg">
-      <div class="row">
-        <div class="col-md-6 drag-container">
-          <div class="row" id="left-revert">
-            {% for item in lefts %}
-            <div class="col-md-4">
-              <div class="card">
-                <img src="{{ item.image }}" alt="" class="card-img-top">
-                <div class="card-body">
-                  {{ item.content }}
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">Revert on spill</h4>
+      </div>
+      <div class="card-body bg-body-bg">
+        <div class="row">
+          <div class="col-md-6 drag-container">
+            <div class="row" id="left-revert">
+              {% for item in lefts %}
+              <div class="col-md-4">
+                <div class="card">
+                  <img src="{{ item.image }}" alt="" class="card-img-top">
+                  <div class="card-body">
+                    {{ item.content }}
+                  </div>
                 </div>
               </div>
+              {% endfor %}
             </div>
-            {% endfor %}
           </div>
-        </div>
-        <div class="col-md-6 drag-container">
-          <div class="row" id="right-revert">
-            {% for item in right %}
-            <div class="col-md-4">
-              <div class="card">
-                <img src="{{ item.image }}" alt="" class="card-img-top">
-                <div class="card-body">
-                  {{ item.content | safe }}
+          <div class="col-md-6 drag-container">
+            <div class="row" id="right-revert">
+              {% for item in right %}
+              <div class="col-md-4">
+                <div class="card">
+                  <img src="{{ item.image }}" alt="" class="card-img-top">
+                  <div class="card-body">
+                    {{ item.content | safe }}
+                  </div>
                 </div>
               </div>
+              {% endfor %}
             </div>
-            {% endfor %}
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="card">
-    <div class="card-header">
-      <h4 class="card-title">Sort only</h4>
-    </div>
-    <div class="card-body bg-body-bg">
-      <div class="row">
-        <div class="col-md-6 drag-container">
-          <div class="card-columns" id="left-sort">
-            {% for item in lefts %}
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">Sort only</h4>
+      </div>
+      <div class="card-body bg-body-bg">
+        <div class="row">
+          <div class="col-md-6 drag-container">
+            <div class="card-columns" id="left-sort">
+              {% for item in lefts %}
 
               <div class="card">
                 <img src="{{ item.image }}" alt="" class="card-img-top">
@@ -166,12 +167,12 @@
                 </div>
               </div>
 
-            {% endfor %}
+              {% endfor %}
+            </div>
           </div>
-        </div>
-        <div class="col-md-6 drag-container">
-          <div class="card-columns" id="right-sort">
-            {% for item in right %}
+          <div class="col-md-6 drag-container">
+            <div class="card-columns" id="right-sort">
+              {% for item in right %}
 
               <div class="card">
                 <img src="{{ item.image }}" alt="" class="card-img-top">
@@ -180,7 +181,8 @@
                 </div>
               </div>
 
-            {% endfor %}
+              {% endfor %}
+            </div>
           </div>
         </div>
       </div>
