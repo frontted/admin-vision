@@ -1,0 +1,155 @@
+---
+title: Vision
+slug: fluid-index
+category: pages
+navbarClass: navbar--primary
+pageClass: pt-0
+---
+{% extends "layouts/default.html" %}
+
+{% block head %}
+  <link type="text/css" href="assets/css/vendor-morris.css" rel="stylesheet">
+{% endblock %}
+
+{%
+  set orders = [
+    {
+      date: '09 Feb 2018',
+      customer: 'Mark Ups',
+      discount: '12.5%',
+      invoice: '#119928',
+      total: '29,021'
+    },
+    {
+      date: '06 Feb 2018',
+      customer: 'Karen Smith',
+      discount: '10.0%',
+      invoice: '#22018',
+      total: '12,220'
+    },
+    {
+      date: '06 Feb 2018',
+      customer: 'John Mix',
+      discount: '8.5%',
+      invoice: '#98201',
+      total: '8,370'
+    },
+    {
+      date: '12 Jan 2018',
+      customer: 'Tara Knows',
+      discount: '32.0%',
+      invoice: '#118230',
+      total: '14,500'
+    },
+    {
+      date: '10 Jan 2018',
+      customer: 'John Smith',
+      discount: '15.5%',
+      invoice: '#22198',
+      total: '9,860'
+    }
+  ]
+%}
+
+{%
+  set rankings = [
+    {
+      user: 'Tara Knows',
+      image: 'assets/images/avatars/person-9.jpg',
+      revenue: '29,021'
+    },
+    {
+      user: 'Karen Smith',
+      image: 'assets/images/avatars/person-13.jpg',
+      revenue: '25,250'
+    },
+    {
+      user: 'Mark Ups',
+      image: 'assets/images/avatars/person-6.jpg',
+      revenue: '21,330'
+    },
+    {
+      user: 'Steven Short',
+      image: 'assets/images/avatars/person-5.jpg',
+      revenue: '17,740'
+    },
+    {
+      user: 'John Mix',
+      image: 'assets/images/avatars/person-7.jpg',
+      revenue: '13,120'
+    },
+    {
+      user: 'Karen Smith',
+      image: 'assets/images/avatars/person-13.jpg',
+      revenue: '10,880'
+    }
+  ]
+%}
+
+{% block scripts %}
+<script src="assets/vendor/morris.min.js"></script>
+<script src="assets/vendor/raphael.min.js"></script>
+<script>
+  $('.milestone-chart').each((index, element) => {
+    let ctx = element.getContext('2d')
+    let value1 = 60
+    let value2 = 100 - value1
+
+    new Chart(ctx, {
+      type: 'pie',
+      data: {
+        datasets: [{
+          data: [value1, value2],
+          borderWidth: 1,
+          backgroundColor: ['#ffffff', colors.color_bg]
+        }]
+      },
+      options: {
+        tooltips: { enabled: false },
+        cutoutPercentage: 85
+      }
+    })
+  });
+
+  // Morris Sales Chart
+  new Morris.Line({
+    element: 'morris-sales-chart',
+    data: [
+    { year: '2013', a: 17 , b: 21, c: 8},
+    { year: '2014', a: 10 , b: 12, c: 10},
+    { year: '2015', a: 5 , b: 32, c: 19},
+    { year: '2016', a: 17 , b: 23, c: 20},
+    { year: '2017', a: 29 , b: 37, c: 21}
+    ],
+    xkey: 'year',
+    ykeys: ['a', 'b', 'c'],
+    labels: ['iPhone', 'Android', 'Other'],
+    lineColors: [colors.color_primary, colors.color_success, colors.color_warning],
+    resize: true
+  });
+
+  new Morris.Area({
+    element: 'morris-main-chart',
+    data: [
+    { year: '2017-01', a: 6352.27},
+    { year: '2017-02', a: 4309.98},
+    { year: '2017-03', a: 1465.98},
+    { year: '2017-04', a: 1298.25},
+    { year: '2017-05', a: 3209},
+    { year: '2017-06', a: 2083},
+    { year: '2017-07', a: 1285.23},
+    { year: '2017-08', a: 1289},
+    { year: '2017-09', a: 4430},
+    { year: '2017-10', a: 8921.19}
+    ],
+    xkey: 'year',
+    ykeys: ['a'],
+    labels: ['Earnings'],
+    lineColors: ['#fff'],
+    fillOpacity: '0.2',
+    gridEnabled: true,
+    gridTextColor: '#ffffff',
+    resize: true
+  });
+</script>
+{% endblock %}
