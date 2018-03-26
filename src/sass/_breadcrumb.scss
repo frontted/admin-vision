@@ -1,8 +1,10 @@
 .breadcrumb {
-  margin-bottom: 0;
+  margin-bottom: $spacer;
   padding-left: 0;
+  padding-top: 0;
+  padding-bottom: 0;
   background-color: transparent;
-  color: theme-color('muted-color');
+  color: rgba(55, 57, 76, 0.54);
   a {
     color: theme-color('link-color');
   }

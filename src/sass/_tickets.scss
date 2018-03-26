@@ -1,0 +1,10 @@
+.tickets-header {
+  margin-bottom: $spacer;
+  align-items: center;
+}
+
+@include media-breakpoint-down(md) {
+  .tickets-header > div {
+    margin-bottom: $spacer / 2;
+  }
+}
