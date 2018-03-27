@@ -1,0 +1,114 @@
+<div class="container-fluid">
+  <ol class="breadcrumb">
+    <li>
+      <a href="index.html">Home</a>
+    </li>
+    <li>
+      <a href="#">Learning</a>
+    </li>
+    <li>
+      Lessons
+    </li>
+  </ol>
+
+  <div class="mb-3">
+    <h1 class="h2 mb-0">Recently Added</h1>
+    <div class="text-uppercase text-muted">See what's new on Flow.</div>
+  </div>
+
+  <div class="card-deck">
+    {% for lesson in lessons %}
+      {% if loop.index % 4 == 0 %}
+      </div> <div class="card-deck">
+      {% endif %}
+      <div class="card card-lesson">
+        <a href="learning.html">
+          <img class="card-img-top" src="{{ lesson.image }}" alt="">
+        </a>
+        <div class="card-body">
+          <a href="learning.html" class="card-title">
+            {{ lesson.title }}
+          </a>
+          <div class="card-text text-muted">
+            {{ lesson.level }}
+          </div>
+        </div>
+        <div class="card-footer">
+          <div class="media align-items-center">
+            <img src="{{ lesson.author_image }}" alt="" class="mr-2 rounded-circle" width="40">
+            <div class="media-body d-flex align-items-center">
+              <div class="lh-1">
+                <a href="profile.html">{{ lesson.author }}</a>
+                <div>
+                  <small class="text-muted">{{ lesson.date }}</small>
+                </div>
+              </div>
+              <div class="ml-auto">
+                <span class="align-middle">{{ lesson.likes }} likes</span>
+                <span class="text-muted mx-1">|</span>
+                <a href="#" class="text-muted">
+                  {% if loop.index == 2 %}
+                    <i class="material-icons align-middle text-primary">favorite</i>
+                  {% else %}
+                    <i class="material-icons align-middle">favorite</i>
+                  {% endif %}
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+  <hr class="pb-3">
+  <div class="mb-3">
+    <h1 class="h2 mb-0">Trending</h1>
+    <div class="text-uppercase text-muted">Here are some of the most loved lessons.</div>
+  </div>
+
+  <div class="card-deck">
+    {% for lesson in lessons %}
+      {% if loop.index % 4 == 0 %}
+      </div> <div class="card-deck">
+      {% endif %}
+      <div class="card card-lesson">
+        <a href="learning.html">
+          <img class="card-img-top" src="{{ lesson.image }}" alt="">
+        </a>
+        <div class="card-body">
+          <a href="learning.html" class="card-title">
+            {{ lesson.title }}
+          </a>
+          <div class="card-text text-muted">
+            {{ lesson.level }}
+          </div>
+        </div>
+        <div class="card-footer">
+          <div class="media align-items-center">
+            <img src="{{ lesson.author_image }}" alt="" class="mr-2 rounded-circle" width="40">
+            <div class="media-body d-flex align-items-center">
+              <div class="lh-1">
+                <a href="profile.html">{{ lesson.author }}</a>
+                <div class="text-muted">
+                  <small>{{ lesson.date }}</small>
+                </div>
+              </div>
+              <div class="ml-auto">
+                <span class="align-middle">{{ lesson.likes }} likes</span>
+                <span class="text-muted mx-1">|</span>
+                <a href="#" class="text-muted">
+                  {% if loop.index == 4 %}
+                    <i class="material-icons align-middle text-primary">favorite</i>
+                  {% else %}
+                    <i class="material-icons align-middle">favorite</i>
+                  {% endif %}
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>

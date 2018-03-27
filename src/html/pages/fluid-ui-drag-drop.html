@@ -1,0 +1,86 @@
+---
+title: Vision
+slug: fluid-ui-drag-drop
+category: ui
+---
+{% extends "./layouts/default.html" %}
+
+{%
+  set lefts = [
+  {
+    content: "You can move these elem.",
+    color: 'primary',
+    image: 'assets/images/jason-blackeye-217162.jpg'
+  },
+  {
+    content: "Moving them anywhere.",
+    color: 'primary',
+    image: 'assets/images/linkedin-sales-navigator-402873.jpg'
+  },
+  {
+    content: "More interactive use cases.",
+    color: 'primary',
+    image: 'assets/images/linkedin-sales-navigator-403828.jpg'
+  }
+  ]
+%}
+
+{%
+  set right = [
+  {
+    content: "Moving <code>&lt;input/&gt;</code>.",
+    color: 'danger',
+    image: 'assets/images/mia-baker-322599.jpg'
+  },
+  {
+    content: "You only need to specify.",
+    color: 'danger',
+    image: 'assets/images/luke-chesser-2347.jpg'
+  },
+  {
+    content: "You can move in container.",
+    color: 'primary',
+    image: 'assets/images/linkedin-sales-navigator-404002.jpg'
+  }
+  ]
+%}
+
+{% block head %}
+  <link type="text/css" href="assets/css/vendor-dragula.css" rel="stylesheet">
+{% endblock %}
+
+{% block scripts %}
+<script src="assets/vendor/dragula.min.js"></script>
+
+<script>
+
+  // Default
+  dragula([document.getElementById('left'), document.getElementById('right')]);
+
+  // Highlight
+  dragula([document.getElementById('left-highlight'), document.getElementById('right-highlight')])
+  .on('drag', function (el) {
+    el.className = el.className.replace('ex-moved', '');
+  }).on('drop', function (el) {
+    el.className += ' ex-moved';
+  }).on('over', function (el, container) {
+    container.className += ' ex-over';
+  }).on('out', function (el, container) {
+    container.className = container.className.replace('ex-over', '');
+  });
+
+  // Remove Spill
+  dragula([document.getElementById('left-spill'), document.getElementById('right-spill')], {
+    removeOnSpill: true
+  });
+
+  // Revert Spill
+  dragula([document.getElementById('left-revert'), document.getElementById('right-revert')], {
+    revertOnSpill: true
+  });
+
+  // Sort only
+  dragula([document.getElementById('left-sort')]);
+  dragula([document.getElementById('right-sort')]);
+</script>
+{% endblock %}

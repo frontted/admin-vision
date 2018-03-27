@@ -1,0 +1,71 @@
+<div class="container-fluid">
+  <ol class="breadcrumb">
+    <li>
+      <a href="index.html">Home</a>
+    </li>
+    <li>
+      <a href="#">Learning</a>
+    </li>
+    <li>
+      Lessons
+    </li>
+  </ol>
+
+  <div class="mb-3">
+    <h1 class="h2 mb-0">Recently Added</h1>
+    <div class="text-uppercase text-muted">See what's new on Flow.</div>
+  </div>
+
+  <div class="card-deck">
+    {% for lesson in lessons %}
+      {% if loop.index0 == 2 %}
+        </div> <div class="card-deck">
+      {% endif %}
+      <div class="card card-lesson">
+        <a href="learning.html" class="text-white">
+          <img class="card-img" src="{{ lesson.image }}" alt="">
+          <div class="card-img-overlay">
+            <div class="badge badge-{{ lesson.tag_color }} text-uppercase">{{ lesson.tag }}</div>
+            <h4>{{ lesson.title }}</h4>
+            <p class="card-text">{{ lesson.description }}</p>
+            <div class="info">
+              {{ lesson.number }} lessons
+              <span class="mx-1">|</span>
+              {{ lesson.level }}
+            </div>
+          </div>
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+
+  <hr>
+  <div class="mb-3">
+    <h2 class="mb-0">Trending</h2>
+    <div class="text-uppercase text-muted">Some of the most loved lessons.</div>
+  </div>
+
+  <div class="card-deck">
+    {% for lesson in lessons %}
+      {% if loop.index0 == 2 %}
+        </div> <div class="card-deck">
+      {% endif %}
+      <div class="card card-lesson">
+      <a href="learning.html" class="text-white">
+        <img class="card-img" src="{{ lesson.image }}" alt="">
+        <div class="card-img-overlay">
+          <div class="badge badge-{{ lesson.tag_color }} text-uppercase">{{ lesson.tag }}</div>
+          <h4>{{ lesson.title }}</h4>
+          <p class="card-text">{{ lesson.description }}</p>
+          <div class="info">
+            {{ lesson.number }} lessons
+            <span class="mx-1">|</span>
+            {{ lesson.level }}
+          </div>
+        </div>
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+
+</div>

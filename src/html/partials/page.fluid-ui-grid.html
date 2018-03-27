@@ -1,0 +1,331 @@
+<div class="container-fluid ui-grid">
+  <ol class="breadcrumb">
+    <li>
+      <a href="index.html">Home</a>
+    </li>
+    <li>
+      <a href="#">UI Components</a>
+    </li>
+    <li>
+      Grid
+    </li>
+  </ol>
+
+  <h1 class="h2 mb-0">Grid</h1>
+
+  <div class="text-uppercase text-muted">
+    Use the powerful mobile-first flexbox grid to build layouts of all shapes and sizes thanks to a twelve column system, five default responsive tiers, Sass variables and mixins, and dozens of predefined classes.
+  </div>
+  <hr>
+  <div class="card">
+    <div class="card-header">
+      <h4 class="card-title">Equal-width columns</h4>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col example-grid-col">
+          1 of 2
+        </div>
+        <div class="col example-grid-col">
+          2 of 2
+        </div>
+      </div>
+      <div class="row">
+        <div class="col example-grid-col">
+          1 of 3
+        </div>
+        <div class="col example-grid-col">
+          2 of 3
+        </div>
+        <div class="col example-grid-col">
+          3 of 3
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <h4 class="card-title">Setting one column width</h4>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col example-grid-col">
+          1 of 3
+        </div>
+        <div class="col-6 example-grid-col">
+          2 of 3 (wider)
+        </div>
+        <div class="col example-grid-col">
+          3 of 3
+        </div>
+      </div>
+      <div class="row">
+        <div class="col example-grid-col">
+          1 of 3
+        </div>
+        <div class="col-5 example-grid-col">
+          2 of 3 (wider)
+        </div>
+        <div class="col example-grid-col">
+          3 of 3
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <h4 class="card-title">Variable width content</h4>
+    </div>
+    <div class="card-body">
+      <div class="row justify-content-md-center">
+        <div class="col col-lg-2 example-grid-col">
+          1 of 3
+        </div>
+        <div class="col-md-auto example-grid-col">
+          Variable width content
+        </div>
+        <div class="col col-lg-2 example-grid-col">
+          3 of 3
+        </div>
+      </div>
+      <div class="row">
+        <div class="col example-grid-col">
+          1 of 3
+        </div>
+        <div class="col-md-auto example-grid-col">
+          Variable width content
+        </div>
+        <div class="col col-lg-2 example-grid-col">
+          3 of 3
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <h4 class="card-title">Equal-width multi-row</h4>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col example-grid-col">col</div>
+        <div class="col example-grid-col">col</div>
+        <div class="w-100"></div>
+        <div class="col example-grid-col">col</div>
+        <div class="col example-grid-col">col</div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <h4 class="card-title">Responsive classes</h4>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col example-grid-col">col</div>
+        <div class="col example-grid-col">col</div>
+        <div class="col example-grid-col">col</div>
+        <div class="col example-grid-col">col</div>
+      </div>
+      <div class="row">
+        <div class="col-8 example-grid-col">col-8</div>
+        <div class="col-4 example-grid-col">col-4</div>
+      </div>
+    </div>
+  </div>
+  <h2>Alignment</h2>
+  <p class="lead">
+    Use flexbox alignment utilities to vertically and horizontally align columns.
+  </p>
+  <hr>
+  <div class="card">
+    <div class="card-header">
+      <h4 class="card-title">Vertical Alignment</h4>
+    </div>
+    <div class="card-body">
+      <div class="row align-items-start example-row-flex-cols">
+        <div class="col example-grid-col">
+          One of three columns
+        </div>
+        <div class="col example-grid-col">
+          One of three columns
+        </div>
+        <div class="col example-grid-col">
+          One of three columns
+        </div>
+      </div>
+      <div class="row align-items-center example-row-flex-cols">
+        <div class="col example-grid-col">
+          One of three columns
+        </div>
+        <div class="col example-grid-col">
+          One of three columns
+        </div>
+        <div class="col example-grid-col">
+          One of three columns
+        </div>
+      </div>
+      <div class="row align-items-end example-row-flex-cols">
+        <div class="col example-grid-col">
+          One of three columns
+        </div>
+        <div class="col example-grid-col">
+          One of three columns
+        </div>
+        <div class="col example-grid-col">
+          One of three columns
+        </div>
+      </div>
+      <div class="row example-row-flex-cols">
+        <div class="col align-self-start example-grid-col">
+          One of three columns
+        </div>
+        <div class="col align-self-center example-grid-col">
+          One of three columns
+        </div>
+        <div class="col align-self-end example-grid-col">
+          One of three columns
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <h4 class="card-title">Horizontal alignment</h4>
+    </div>
+    <div class="card-body">
+      <div class="row justify-content-start">
+        <div class="col-4 example-grid-col">
+          One of two columns
+        </div>
+        <div class="col-4 example-grid-col">
+          One of two columns
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-4 example-grid-col">
+          One of two columns
+        </div>
+        <div class="col-4 example-grid-col">
+          One of two columns
+        </div>
+      </div>
+      <div class="row justify-content-end">
+        <div class="col-4 example-grid-col">
+          One of two columns
+        </div>
+        <div class="col-4 example-grid-col">
+          One of two columns
+        </div>
+      </div>
+      <div class="row justify-content-around">
+        <div class="col-4 example-grid-col">
+          One of two columns
+        </div>
+        <div class="col-4 example-grid-col">
+          One of two columns
+        </div>
+      </div>
+      <div class="row justify-content-between">
+        <div class="col-4 example-grid-col">
+          One of two columns
+        </div>
+        <div class="col-4 example-grid-col">
+          One of two columns
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <h4 class="card-title">Column wrapping</h4>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-9 example-grid-col">.col-9</div>
+        <div class="col-4 example-grid-col">.col-4<br>Since 9 + 4 = 13 &gt; 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.</div>
+        <div class="col-6 example-grid-col">.col-6<br>Subsequent columns continue along the new line.</div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <h4 class="card-title">Column resets</h4>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-6 col-sm-3 example-grid-col">.col-6 .col-sm-3</div>
+        <div class="col-6 col-sm-3 example-grid-col">.col-6 .col-sm-3</div>
+
+        <!-- Add the extra clearfix for only the required viewport -->
+        <div class="clearfix d-none d-sm-block"></div>
+
+        <div class="col-6 col-sm-3 example-grid-col">.col-6 .col-sm-3</div>
+        <div class="col-6 col-sm-3 example-grid-col">.col-6 .col-sm-3</div>
+      </div>
+    </div>
+  </div>
+  <h2>Reordering</h2>
+  <div class="card">
+    <div class="card-header">
+      <h4 class="card-title">Flex Order</h4>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col example-grid-col">
+          First, but unordered
+        </div>
+        <div class="col order-12 example-grid-col">
+          Second, but last
+        </div>
+        <div class="col order-1 example-grid-col">
+          Third, but first
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <h4 class="card-title">Offsetting columns</h4>
+    </div>
+    <div class="card-body">
+      <div class="row example-row">
+        <div class="col-md-4 example-grid-col">.col-md-4</div>
+        <div class="col-md-4 ml-auto example-grid-col">.col-md-4 .ml-auto</div>
+      </div>
+      <div class="row example-row">
+        <div class="col-md-3 ml-md-auto example-grid-col">.col-md-3 .ml-md-auto</div>
+        <div class="col-md-3 ml-md-auto example-grid-col">.col-md-3 .ml-md-auto</div>
+      </div>
+      <div class="row example-row">
+        <div class="col-auto mr-auto example-grid-col">.col-auto .mr-auto</div>
+        <div class="col-auto example-grid-col">.col-auto</div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <h4 class="card-title">Nesting</h4>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-sm-9 example-grid-col">
+          Level 1: .col-sm-9
+          <div class="row">
+            <div class="col-8 col-sm-6 example-grid-col">
+              Level 2: .col-8 .col-sm-6
+            </div>
+            <div class="col-4 col-sm-6 example-grid-col">
+              Level 2: .col-4 .col-sm-6
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3 example-grid-col">
+          Level 1: .col-sm-3
+          <div class="col example-grid-col">
+            Level 2: .col
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
