@@ -30,7 +30,6 @@
 }
 
 .navbar {
-  background: #ffffff;
   height: $navbar-height;
   display: flex;
   align-items: center;
@@ -87,17 +86,25 @@
     }
   }
 
-  &.navbar--white {
+  &.bg-white {
     background: #ffffff;
     color: theme-color('text-color');
     .text-light {
       color: theme-color('text-color') !important;
     }
-    .navbar-nav.navbar-right {
+    .dropdown-toggle:focus {
+      outline: none;
+    }
+    .navbar-nav.notifications {
+      .dropdown {
+        height: 30px;
+        line-height: 30px;
+      }
       .dropdown-toggle {
         color: rgba(55, 57, 76, .24);
-        &:hover {
+        &:hover, &:focus {
           color: rgba(55, 57, 76, .54);
+          outline: none;
         }
       }
       .dropdown.show {
@@ -106,6 +113,7 @@
         }
       }
       .nav-item.nav-dropdown .dropdown-menu {
+        margin-top: 5px;
         .material-icons {
           color: rgba(255, 255, 255, 0.54);
         }
@@ -142,9 +150,7 @@
   }
 
   &.navbar-fixed, &.navbar-main {
-    .navbar-nav.navbar-right {
-      align-items: center;
-      margin-left: auto;
+    .navbar-nav.notifications {
       .nav-item {
         &:not(:last-of-type) {
           margin-right: 1.625rem;
@@ -170,27 +176,40 @@
   }
   &.navbar-fixed {
     .navbar-brand {
-      color: theme-color('text-color')
+      color: theme-color('text-color');
+      font-size: 28px;
+      font-weight: bold;
+      color: #585969;
     }
-    .navbar-nav.navbar-center {
-      width: 100%;
-      justify-content: center;
+    .navbar-nav {
       .nav-item {
-        padding: 1.125rem 0;
         .nav-link {
-          font-weight: 300;
-          font-size: 1.125rem;
+          font-size: 1.1rem;
           color: rgba(55, 57, 76, .54);
           letter-spacing: 0.0625rem;
           padding: 0 1.2rem;
+          height: $navbar-height;
+          line-height: $navbar-height;
+
         }
-        &.active {
+        &.nav-active {
           .nav-link {
             color: theme-color('text-color') !important;
+            &:before {
+              content:'';
+              height:100%;
+              width:100%;
+              position: absolute;
+              top: 0;
+              left:0;
+              right:0;
+              margin-top: 1px;
+              border-bottom: 3px solid theme-color('primary');
+            }
           }
-          border-bottom: 4px solid #2E7CCE;
         }
       }
+      .dropdown-menu { margin-top: 0; }
     }
   }
 }
@@ -203,13 +222,11 @@
     .nav-item {
       margin: 0 !important;
     }
-    .nav-link {
-      padding: 0;
-    }
     a:focus {
       outline:none;
     }
     .nav-link {
+      padding: 0;
       border: 0;
       &:hover {
         border: 0;
@@ -232,4 +249,12 @@
 
 .mdk-header {
   height: $navbar-height !important;
+}
+
+.mdk-header--fixed .navbar-fixed.bg-white {
+  border-bottom: 1px solid #efefef;
+}
+
+.page-banner + .mdk-header--fixed {
+
 }

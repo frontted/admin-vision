@@ -5,8 +5,9 @@
   padding-bottom: 0;
   background-color: transparent;
   color: rgba(55, 57, 76, 0.54);
+  font-size: .9rem;
   a {
-    color: theme-color('link-color');
+    color: theme-color('primary');
   }
   li {
     &:not(:first-of-type) {

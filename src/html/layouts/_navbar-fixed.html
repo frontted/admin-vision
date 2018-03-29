@@ -1,442 +1,441 @@
-<nav class="navbar navbar-fixed navbar-expand-lg {{ navbarClass if navbarClass else 'navbar--primary' }}">
-  <a class="h4 mb-0 text-uppercase navbar-brand" href="index.html">Vision</a>
+<nav class="navbar navbar-fixed navbar-expand-lg {{ navbarClass if navbarClass else 'navbar--primary' }}   justify-content-between">
+  <div class="d-flex flex-row">
+    <a class="h4 mb-0 text-uppercase navbar-brand" href="index.html">Vision</a>
 
-  <button class="btn btn-link navbar-toggler pl-0" type="button" data-toggle="sidebar">
-    <i class="material-icons align-middle md-36">short_text</i>
-  </button>
+    <button class="btn btn-link navbar-toggler pl-0" type="button" data-toggle="sidebar">
+      <i class="material-icons align-middle md-36">short_text</i>
+    </button>
 
-  <div class="dropdown show">
-    <a class="btn-search dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <i class="material-icons md-18 align-middle">search</i>
-    </a>
+    <div class="dropdown show">
+      <a class="btn-search dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="material-icons md-18 align-middle">search</i>
+      </a>
 
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-      <div class="m-dropdown__wrapper">
-        <span class="m-dropdown__arrow m-dropdown__arrow--center"></span>
-        <div class="m-dropdown__inner ">
-          <div class="m-dropdown__header">
-            <form class="m-list-search__form">
-              <div class="m-list-search__form-wrapper">
-                <span class="m-list-search__form-input-wrapper">
-                  <input id="m_quicksearch_input" autocomplete="off" type="text" name="q" class="m-list-search__form-input" value="" placeholder="Search...">
-                </span>
-                <span class="m-list-search__form-icon-close" id="m_quicksearch_close" style="visibility: hidden;">
-                  <i class="material-icons md-18 align-middle">search</i>
-                </span>
-              </div>
-            </form>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <div class="m-dropdown__wrapper">
+          <span class="m-dropdown__arrow m-dropdown__arrow--center"></span>
+          <div class="m-dropdown__inner ">
+            <div class="m-dropdown__header">
+              <form class="m-list-search__form">
+                <div class="m-list-search__form-wrapper">
+                  <span class="m-list-search__form-input-wrapper">
+                    <input id="m_quicksearch_input" autocomplete="off" type="text" name="q" class="m-list-search__form-input" value="" placeholder="Search...">
+                  </span>
+                  <span class="m-list-search__form-icon-close" id="m_quicksearch_close" style="visibility: hidden;">
+                    <i class="material-icons md-18 align-middle">search</i>
+                  </span>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+  <ul class="navbar-nav d-flex flex-row">
+    <li class="nav-item dropdown ml-0 {% if slug == 'index' %}nav-active {% endif %}">
+      <a href="index.html" class="nav-link">Dashboard</a>
+    </li>
+    <li class="nav-item dropdown  {% if category == 'pages' %}nav-active {% endif %}">
+      <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Pages</a>
+      <div class="dropdown-menu">
+        <a href="account.html" class="dropdown-item {% if slug == 'account' %}active {% endif %}">Account</a>
+        <a href="activity-timeline.html" class="dropdown-item {% if slug == 'activity-timeline' %}active {% endif %}">Activity Timeline</a>
+        <a href="blog-post.html" class="dropdown-item {% if slug == 'blog-post' %}active {% endif %}">Blog Post</a>
+        <a href="error.html" class="dropdown-item {% if slug == 'error' %}active {% endif %}">Error</a>
+        <a href="invoice.html" class="dropdown-item {% if slug == 'invoice' %}active {% endif %}">Invoice</a>
+        <a href="pricing.html" class="dropdown-item {% if slug == 'pricing' %}active {% endif %}">Pricing</a>
+        <a href="lessons.html" class="dropdown-item {% if slug == 'lessons' %}active {% endif %}">Lessons</a>
+        <a href="lessons-2.html" class="dropdown-item {% if slug == 'lessons-2' %}active {% endif %}">Lessons 2</a>
+        <a href="learning.html" class="dropdown-item {% if slug == 'learning' %}active {% endif %}">Learning</a>
+        <a href="tickets.html" class="dropdown-item {% if slug == 'tickets' %}active {% endif %}">Tickets</a>
+        <a href="cart.html" class="dropdown-item {% if slug == 'cart' %}active {% endif %}">Shopping Cart</a>
+        <a href="login.html" class="dropdown-item">Login</a>
+        <a href="sigup.html" class="dropdown-item">Sign Up</a>
+        <a href="forgot-password.html" class="dropdown-item">Forgot Password</a>
+      </div>
+    </li>
+    <li class="nav-item dropdown  {% if category == 'ui' %}nav-active {% endif %}">
+      <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Components</a>
+      <div class="dropdown-menu">
+        <a href="ui-buttons.html" class="dropdown-item {% if slug == 'ui-buttons' %}active {% endif %}">Buttons</a>
+        <a href="ui-colors.html" class="dropdown-item {% if slug == 'ui-colors' %}active {% endif %}">Colors</a>
+        <a href="ui-grid.html" class="dropdown-item {% if slug == 'ui-grid' %}active {% endif %}">Grid</a>
+        <a href="ui-icons.html" class="dropdown-item {% if slug == 'ui-icons' %}active {% endif %}">Icons</a>
+        <a href="ui-typography.html" class="dropdown-item {% if slug == 'ui-typography' %}active {% endif %}">Typography</a>
+        <a href="ui-drag-drop.html" class="dropdown-item {% if slug == 'ui-drag-drop' %}active {% endif %}">Drag &amp; Drop</a>
+        <a href="ui-tables.html" class="dropdown-item {% if slug == 'ui-tables' %}active {% endif %}">Tables</a>
+        <a href="ui-navs.html" class="dropdown-item {% if slug == 'ui-navs' %}active {% endif %}">Navs</a>
+        <a href="ui-notifications.html" class="dropdown-item {% if slug == 'ui-notifications' %}active {% endif %}">Notifications</a>
+        <a href="ui-loaders.html" class="dropdown-item {% if slug == 'ui-loaders' %}active {% endif %}">Loaders</a>
+      </div>
+    </li>
+    <li class="nav-item dropdown">
+      <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Layouts</a>
+      <div class="dropdown-menu">
+        <a href="index.html" class="dropdown-item">Fixed</a>
+        <a href="fluid.html" class="dropdown-item">Fluid</a>
+        <a href="sidebar-full-light.html" class="dropdown-item">Sidebar Full Bleed (Light)</a>
+        <a href="sidebar-full-dark.html" class="dropdown-item">Sidebar Full Bleed (Dark)</a>
+      </div>
+    </li>
+  </ul>
+  <ul class="navbar-nav d-flex flex-row notifications">
 
-  <div class="collapse navbar-collapse" id="mainNavbar">
-    <ul class="navbar-nav navbar-center">
-      <li class="nav-item dropdown ml-0 text-uppercase {% if slug == 'index' %}active {% endif %}">
-        <a href="index.html" class="nav-link">Dashboard</a>
-      </li>
-      <li class="nav-item dropdown text-uppercase {% if category == 'pages' %}active {% endif %}">
-        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Pages</a>
-        <div class="dropdown-menu">
-          <a href="account.html" class="dropdown-item {% if slug == 'account' %}active {% endif %}">Account</a>
-          <a href="activity-timeline.html" class="dropdown-item {% if slug == 'activity-timeline' %}active {% endif %}">Activity Timeline</a>
-          <a href="blog-post.html" class="dropdown-item {% if slug == 'blog-post' %}active {% endif %}">Blog Post</a>
-          <a href="error.html" class="dropdown-item {% if slug == 'error' %}active {% endif %}">Error</a>
-          <a href="invoice.html" class="dropdown-item {% if slug == 'invoice' %}active {% endif %}">Invoice</a>
-          <a href="pricing.html" class="dropdown-item {% if slug == 'pricing' %}active {% endif %}">Pricing</a>
-          <a href="lessons.html" class="dropdown-item {% if slug == 'lessons' %}active {% endif %}">Lessons</a>
-          <a href="lessons-2.html" class="dropdown-item {% if slug == 'lessons-2' %}active {% endif %}">Lessons 2</a>
-          <a href="learning.html" class="dropdown-item {% if slug == 'learning' %}active {% endif %}">Learning</a>
-          <a href="tickets.html" class="dropdown-item {% if slug == 'tickets' %}active {% endif %}">Tickets</a>
-          <a href="cart.html" class="dropdown-item {% if slug == 'cart' %}active {% endif %}">Shopping Cart</a>
-          <a href="login.html" class="dropdown-item">Login</a>
-          <a href="sigup.html" class="dropdown-item">Sign Up</a>
-          <a href="forgot-password.html" class="dropdown-item">Forgot Password</a>
-        </div>
-      </li>
-      <li class="nav-item dropdown text-uppercase {% if category == 'ui' %}active {% endif %}">
-        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Components</a>
-        <div class="dropdown-menu">
-          <a href="ui-buttons.html" class="dropdown-item {% if slug == 'ui-buttons' %}active {% endif %}">Buttons</a>
-          <a href="ui-colors.html" class="dropdown-item {% if slug == 'ui-colors' %}active {% endif %}">Colors</a>
-          <a href="ui-grid.html" class="dropdown-item {% if slug == 'ui-grid' %}active {% endif %}">Grid</a>
-          <a href="ui-icons.html" class="dropdown-item {% if slug == 'ui-icons' %}active {% endif %}">Icons</a>
-          <a href="ui-typography.html" class="dropdown-item {% if slug == 'ui-typography' %}active {% endif %}">Typography</a>
-          <a href="ui-drag-drop.html" class="dropdown-item {% if slug == 'ui-drag-drop' %}active {% endif %}">Drag &amp; Drop</a>
-          <a href="ui-tables.html" class="dropdown-item {% if slug == 'ui-tables' %}active {% endif %}">Tables</a>
-          <a href="ui-navs.html" class="dropdown-item {% if slug == 'ui-navs' %}active {% endif %}">Navs</a>
-          <a href="ui-notifications.html" class="dropdown-item {% if slug == 'ui-notifications' %}active {% endif %}">Notifications</a>
-          <a href="ui-loaders.html" class="dropdown-item {% if slug == 'ui-loaders' %}active {% endif %}">Loaders</a>
-        </div>
-      </li>
-      <li class="nav-item dropdown text-uppercase">
-        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Layouts</a>
-        <div class="dropdown-menu">
-          <a href="index.html" class="dropdown-item">Fixed</a>
-          <a href="fluid.html" class="dropdown-item">Fluid</a>
-          <a href="sidebar-full-light.html" class="dropdown-item">Sidebar Full Bleed (Light)</a>
-          <a href="sidebar-full-dark.html" class="dropdown-item">Sidebar Full Bleed (Dark)</a>
-        </div>
-      </li>
-    </ul>
-    <ul class="navbar-nav navbar-right">
+    <li class="nav-item nav-dropdown">
+      <div class="dropdown">
+        <a class="dropdown-toggle dropdown-clear-caret" href="#" id="emailsNavDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="material-icons align-middle">email</i>
+        </a>
 
-      <li class="nav-item nav-dropdown">
-        <div class="dropdown">
-          <a class="dropdown-toggle dropdown-clear-caret" href="#" id="emailsNavDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="material-icons align-middle">email</i>
-          </a>
-
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="emailsNavDropdown">
-            <div class="dropdown-head">
-              <div class="dropdown-head--inner pb-3">
-                <div class="d-flex align-items-center justify-content-between">
-                  <div class="text-uppercase">Emails</div>
-                  <i class="material-icons align-middle">search</i>
-                </div>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="emailsNavDropdown">
+          <div class="dropdown-head">
+            <div class="dropdown-head--inner pb-3">
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="text-uppercase">Emails</div>
+                <i class="material-icons align-middle">search</i>
               </div>
             </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">
-                <div class="media align-items-center">
-                  <a href="profile.html">
-                    <img src="assets/images/avatars/person-8.jpg" class="img-fluid rounded-circle mr-2" width="35" alt="">
-                  </a>
-                  <div class="media-body">
-                    <div class="w-100">I started that project we talked...</div>
-                    <div class="w-100 text-muted">4 secs ago</div>
-                  </div>
-                </div>
-              </li>
-              <li class="list-group-item">
-                <div class="media align-items-center">
-                  <a href="profile.html">
-                    <img src="assets/images/avatars/person-3.jpg" class="img-fluid rounded-circle mr-2" width="35" alt="">
-                  </a>
-                  <div class="media-body">
-                    <div class="w-100">Can we arrange a meeting?...</div>
-                    <div class="w-100 text-muted">25 mins ago</div>
-                  </div>
-                </div>
-              </li>
-              <li class="list-group-item">
-                <div class="media align-items-center">
-                  <a href="profile.html">
-                    <img src="assets/images/avatars/person-4.jpg" class="img-fluid rounded-circle mr-2" width="35" alt="">
-                  </a>
-                  <div class="media-body">
-                    <div class="w-100">We need to fix some bugs...</div>
-                    <div class="w-100 text-muted">7 hrs ago</div>
-                  </div>
-                </div>
-              </li>
-              <li class="list-group-item text-right">
-                <a href="#">
-                  <span class="align-middle">View All</span>
-                  <i class="material-icons md-18 align-middle text-primary">arrow_forward</i>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <div class="media align-items-center">
+                <a href="profile.html">
+                  <img src="assets/images/avatars/person-8.jpg" class="img-fluid rounded-circle mr-2" width="35" alt="">
                 </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </li>
-
-      <li class="nav-item nav-dropdown">
-        <div class="dropdown">
-          <a class="dropdown-toggle dropdown-clear-caret" href="#" id="messagesNavDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="material-icons align-middle">message</i>
-          </a>
-
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="messagesNavDropdown">
-            <div class="dropdown-head">
-              <div class="dropdown-head--inner">
-                <div class="d-flex align-items-center justify-content-between mb-3">
-                  <div class="text-uppercase">Messages</div>
-                  <i class="material-icons align-middle">search</i>
+                <div class="media-body">
+                  <div class="w-100">I started that project we talked...</div>
+                  <div class="w-100 text-muted">4 secs ago</div>
                 </div>
-                <ul class="nav nav-tabs" id="myTab" role="tablist">
-                  <li class="nav-item">
-                    <a class="nav-link active" id="business-tab" data-toggle="tab" href="#business" role="tab" aria-controls="business" aria-selected="true">
-                      <i class="material-icons align-middle">business</i>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" id="warnings-tab" data-toggle="tab" href="#warnings" role="tab" aria-controls="warnings" aria-selected="false">
-                      <i class="material-icons align-middle">error_outline</i>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" id="group-tab" data-toggle="tab" href="#group" role="tab" aria-controls="group" aria-selected="false">
-                      <i class="material-icons align-middle">group_work</i>
-                    </a>
-                  </li>
-                </ul>
               </div>
-            </div>
-            <div class="tab-content" id="myTabContent">
-              <div class="tab-pane fade show active" id="business" role="tabpanel" aria-labelledby="business-tab">
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">
-                    <div class="w-100"><a href="#">john</a> received a new quote</div>
-                    <div class="w-100 text-muted">4 secs ago</div>
-                  </li>
-                  <li class="list-group-item">
-                    <div class="w-100"><a href="#">karen</a> received a new quote</div>
-                    <div class="w-100 text-muted">25 mins ago</div>
-                  </li>
-                  <li class="list-group-item">
-                    <div class="w-100"><a href="#">jim</a> received a new quote</div>
-                    <div class="w-100 text-muted">7 hrs ago</div>
-                  </li>
-                  <li class="list-group-item text-right">
-                    <a href="#">
-                      <span class="align-middle">View All</span>
-                      <i class="material-icons md-18 align-middle text-primary">arrow_forward</i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div class="tab-pane fade" id="warnings" role="tabpanel" aria-labelledby="warnings-tab">
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">
-                    <div class="media align-items-center">
-                      <i class="material-icons align-middle mr-3 text-warning">
-                        info_outline
-                      </i>
-                      <div class="media-body">
-                        <div class="w-100"><a href="profile.html">john</a> received a new <a href="#">quote</a></div>
-                        <div class="w-100 text-muted">4 secs ago</div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="list-group-item">
-                    <div class="media align-items-center">
-                      <i class="material-icons align-middle mr-3 text-success">
-                        check_circle
-                      </i>
-                      <div class="media-body">
-                        <div class="w-100"><a href="profile.html">karen</a> completed a <a href="#">task</a></div>
-                        <div class="w-100 text-muted">25 mins ago</div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="list-group-item">
-                    <div class="media align-items-center">
-                      <i class="material-icons align-middle mr-3 text-danger">
-                        warning
-                      </i>
-                      <div class="media-body">
-                        <div class="w-100"><a href="profile.html">jim</a> removed a <a href="#">task</a></div>
-                        <div class="w-100 text-muted">7 hrs ago</div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="list-group-item text-right">
-                    <a href="#">
-                      <span class="align-middle">View All</span>
-                      <i class="material-icons md-18 align-middle text-primary">arrow_forward</i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div class="tab-pane fade" id="group" role="tabpanel" aria-labelledby="group-tab">
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">
-                    <div class="media align-items-center">
-                      <a href="profile.html">
-                        <img src="assets/images/avatars/person-8.jpg" class="img-fluid rounded-circle mr-3" width="35" alt="">
-                      </a>
-                      <div class="media-body">
-                        <div class="w-100">I started that project we talked...</div>
-                        <div class="w-100 text-muted">4 secs ago</div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="list-group-item">
-                    <div class="media align-items-center">
-                      <a href="profile.html">
-                        <img src="assets/images/avatars/person-3.jpg" class="img-fluid rounded-circle mr-3" width="35" alt="">
-                      </a>
-                      <div class="media-body">
-                        <div class="w-100">Can we arrange a meeting?...</div>
-                        <div class="w-100 text-muted">25 mins ago</div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="list-group-item">
-                    <div class="media align-items-center">
-                      <a href="profile.html">
-                        <img src="assets/images/avatars/person-4.jpg" class="img-fluid rounded-circle mr-3" width="35" alt="">
-                      </a>
-                      <div class="media-body">
-                        <div class="w-100">We need to fix some bugs...</div>
-                        <div class="w-100 text-muted">7 hrs ago</div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="list-group-item text-right">
-                    <a href="#">
-                      <span class="align-middle">View All</span>
-                      <i class="material-icons md-18 align-middle text-primary">arrow_forward</i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-
-      <li class="nav-item nav-dropdown">
-        <div class="dropdown">
-          <a class="dropdown-toggle dropdown-clear-caret" href="#" id="notificationsNavDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="material-icons align-middle">notifications</i>
-          </a>
-
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="notificationsNavDropdown">
-            <div class="dropdown-head">
-              <div class="dropdown-head--inner">
-                <div class="d-flex align-items-center justify-content-between mb-3">
-                  <div class="text-uppercase">Notifications</div>
-                  <i class="material-icons align-middle">search</i>
+            </li>
+            <li class="list-group-item">
+              <div class="media align-items-center">
+                <a href="profile.html">
+                  <img src="assets/images/avatars/person-3.jpg" class="img-fluid rounded-circle mr-2" width="35" alt="">
+                </a>
+                <div class="media-body">
+                  <div class="w-100">Can we arrange a meeting?...</div>
+                  <div class="w-100 text-muted">25 mins ago</div>
                 </div>
-                <ul class="nav nav-tabs" id="myTab" role="tablist">
-                  <li class="nav-item">
-                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
-                      <i class="material-icons align-middle">home</i>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">
-                      <i class="material-icons align-middle">error_outline</i>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">
-                      <i class="material-icons align-middle">people</i>
-                    </a>
-                  </li>
-                </ul>
               </div>
+            </li>
+            <li class="list-group-item">
+              <div class="media align-items-center">
+                <a href="profile.html">
+                  <img src="assets/images/avatars/person-4.jpg" class="img-fluid rounded-circle mr-2" width="35" alt="">
+                </a>
+                <div class="media-body">
+                  <div class="w-100">We need to fix some bugs...</div>
+                  <div class="w-100 text-muted">7 hrs ago</div>
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item text-right">
+              <a href="#">
+                <span class="align-middle">View All</span>
+                <i class="material-icons md-18 align-middle text-primary">arrow_forward</i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </li>
+
+    <li class="nav-item nav-dropdown">
+      <div class="dropdown">
+        <a class="dropdown-toggle dropdown-clear-caret" href="#" id="messagesNavDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="material-icons align-middle">message</i>
+        </a>
+
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="messagesNavDropdown">
+          <div class="dropdown-head">
+            <div class="dropdown-head--inner">
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <div class="text-uppercase">Messages</div>
+                <i class="material-icons align-middle">search</i>
+              </div>
+              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" id="business-tab" data-toggle="tab" href="#business" role="tab" aria-controls="business" aria-selected="true">
+                    <i class="material-icons align-middle">business</i>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="warnings-tab" data-toggle="tab" href="#warnings" role="tab" aria-controls="warnings" aria-selected="false">
+                    <i class="material-icons align-middle">error_outline</i>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="group-tab" data-toggle="tab" href="#group" role="tab" aria-controls="group" aria-selected="false">
+                    <i class="material-icons align-middle">group_work</i>
+                  </a>
+                </li>
+              </ul>
             </div>
-            <div class="tab-content" id="myTabContent">
-              <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">
-                    <div class="w-100"><a href="#">john</a> received a new quote</div>
-                    <div class="w-100 text-muted">4 secs ago</div>
-                  </li>
-                  <li class="list-group-item">
-                    <div class="w-100"><a href="#">karen</a> received a new quote</div>
-                    <div class="w-100 text-muted">25 mins ago</div>
-                  </li>
-                  <li class="list-group-item">
-                    <div class="w-100"><a href="#">jim</a> received a new quote</div>
-                    <div class="w-100 text-muted">7 hrs ago</div>
-                  </li>
-                  <li class="list-group-item text-right">
-                    <a href="#">
-                      <span class="align-middle">View All</span>
-                      <i class="material-icons md-18 align-middle text-primary">arrow_forward</i>
+          </div>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="business" role="tabpanel" aria-labelledby="business-tab">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <div class="w-100"><a href="#">john</a> received a new quote</div>
+                  <div class="w-100 text-muted">4 secs ago</div>
+                </li>
+                <li class="list-group-item">
+                  <div class="w-100"><a href="#">karen</a> received a new quote</div>
+                  <div class="w-100 text-muted">25 mins ago</div>
+                </li>
+                <li class="list-group-item">
+                  <div class="w-100"><a href="#">jim</a> received a new quote</div>
+                  <div class="w-100 text-muted">7 hrs ago</div>
+                </li>
+                <li class="list-group-item text-right">
+                  <a href="#">
+                    <span class="align-middle">View All</span>
+                    <i class="material-icons md-18 align-middle text-primary">arrow_forward</i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="tab-pane fade" id="warnings" role="tabpanel" aria-labelledby="warnings-tab">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <div class="media align-items-center">
+                    <i class="material-icons align-middle mr-3 text-warning">
+                      info_outline
+                    </i>
+                    <div class="media-body">
+                      <div class="w-100"><a href="profile.html">john</a> received a new <a href="#">quote</a></div>
+                      <div class="w-100 text-muted">4 secs ago</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="media align-items-center">
+                    <i class="material-icons align-middle mr-3 text-success">
+                      check_circle
+                    </i>
+                    <div class="media-body">
+                      <div class="w-100"><a href="profile.html">karen</a> completed a <a href="#">task</a></div>
+                      <div class="w-100 text-muted">25 mins ago</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="media align-items-center">
+                    <i class="material-icons align-middle mr-3 text-danger">
+                      warning
+                    </i>
+                    <div class="media-body">
+                      <div class="w-100"><a href="profile.html">jim</a> removed a <a href="#">task</a></div>
+                      <div class="w-100 text-muted">7 hrs ago</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item text-right">
+                  <a href="#">
+                    <span class="align-middle">View All</span>
+                    <i class="material-icons md-18 align-middle text-primary">arrow_forward</i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="tab-pane fade" id="group" role="tabpanel" aria-labelledby="group-tab">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <div class="media align-items-center">
+                    <a href="profile.html">
+                      <img src="assets/images/avatars/person-8.jpg" class="img-fluid rounded-circle mr-3" width="35" alt="">
                     </a>
-                  </li>
-                </ul>
-              </div>
-              <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">
-                    <div class="media align-items-center">
-                      <i class="material-icons align-middle mr-3 text-warning">
-                        info_outline
-                      </i>
-                      <div class="media-body">
-                        <div class="w-100"><a href="profile.html">john</a> received a new <a href="#">quote</a></div>
-                        <div class="w-100 text-muted">4 secs ago</div>
-                      </div>
+                    <div class="media-body">
+                      <div class="w-100">I started that project we talked...</div>
+                      <div class="w-100 text-muted">4 secs ago</div>
                     </div>
-                  </li>
-                  <li class="list-group-item">
-                    <div class="media align-items-center">
-                      <i class="material-icons align-middle mr-3 text-success">
-                        check_circle
-                      </i>
-                      <div class="media-body">
-                        <div class="w-100"><a href="profile.html">karen</a> completed a <a href="#">task</a></div>
-                        <div class="w-100 text-muted">25 mins ago</div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="list-group-item">
-                    <div class="media align-items-center">
-                      <i class="material-icons align-middle mr-3 text-danger">
-                        warning
-                      </i>
-                      <div class="media-body">
-                        <div class="w-100"><a href="profile.html">jim</a> removed a <a href="#">task</a></div>
-                        <div class="w-100 text-muted">7 hrs ago</div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="list-group-item text-right">
-                    <a href="#">
-                      <span class="align-middle">View All</span>
-                      <i class="material-icons md-18 align-middle text-primary">arrow_forward</i>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="media align-items-center">
+                    <a href="profile.html">
+                      <img src="assets/images/avatars/person-3.jpg" class="img-fluid rounded-circle mr-3" width="35" alt="">
                     </a>
-                  </li>
-                </ul>
-              </div>
-              <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">
-                    <div class="media align-items-center">
-                      <a href="profile.html">
-                        <img src="assets/images/avatars/person-8.jpg" class="img-fluid rounded-circle mr-3" width="35" alt="">
-                      </a>
-                      <div class="media-body">
-                        <div class="w-100">I started that project we talked...</div>
-                        <div class="w-100 text-muted">4 secs ago</div>
-                      </div>
+                    <div class="media-body">
+                      <div class="w-100">Can we arrange a meeting?...</div>
+                      <div class="w-100 text-muted">25 mins ago</div>
                     </div>
-                  </li>
-                  <li class="list-group-item">
-                    <div class="media align-items-center">
-                      <a href="profile.html">
-                        <img src="assets/images/avatars/person-3.jpg" class="img-fluid rounded-circle mr-3" width="35" alt="">
-                      </a>
-                      <div class="media-body">
-                        <div class="w-100">Can we arrange a meeting?...</div>
-                        <div class="w-100 text-muted">25 mins ago</div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="list-group-item">
-                    <div class="media align-items-center">
-                      <a href="profile.html">
-                        <img src="assets/images/avatars/person-4.jpg" class="img-fluid rounded-circle mr-3" width="35" alt="">
-                      </a>
-                      <div class="media-body">
-                        <div class="w-100">We need to fix some bugs...</div>
-                        <div class="w-100 text-muted">7 hrs ago</div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="list-group-item text-right">
-                    <a href="#">
-                      <span class="align-middle">View All</span>
-                      <i class="material-icons md-18 align-middle text-primary">arrow_forward</i>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="media align-items-center">
+                    <a href="profile.html">
+                      <img src="assets/images/avatars/person-4.jpg" class="img-fluid rounded-circle mr-3" width="35" alt="">
                     </a>
-                  </li>
-                </ul>
-              </div>
+                    <div class="media-body">
+                      <div class="w-100">We need to fix some bugs...</div>
+                      <div class="w-100 text-muted">7 hrs ago</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item text-right">
+                  <a href="#">
+                    <span class="align-middle">View All</span>
+                    <i class="material-icons md-18 align-middle text-primary">arrow_forward</i>
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
-      </li>
+      </div>
+    </li>
 
-      <li class="nav-item nav-account">
-        {% include 'layouts/_logo.html' %}
-      </li>
-    </ul>
-  </div>
+    <li class="nav-item nav-dropdown">
+      <div class="dropdown">
+        <a class="dropdown-toggle dropdown-clear-caret" href="#" id="notificationsNavDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="material-icons align-middle">notifications</i>
+        </a>
+
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="notificationsNavDropdown">
+          <div class="dropdown-head">
+            <div class="dropdown-head--inner">
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <div class="text-uppercase">Notifications</div>
+                <i class="material-icons align-middle">search</i>
+              </div>
+              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
+                    <i class="material-icons align-middle">home</i>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">
+                    <i class="material-icons align-middle">error_outline</i>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">
+                    <i class="material-icons align-middle">people</i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <div class="w-100"><a href="#">john</a> received a new quote</div>
+                  <div class="w-100 text-muted">4 secs ago</div>
+                </li>
+                <li class="list-group-item">
+                  <div class="w-100"><a href="#">karen</a> received a new quote</div>
+                  <div class="w-100 text-muted">25 mins ago</div>
+                </li>
+                <li class="list-group-item">
+                  <div class="w-100"><a href="#">jim</a> received a new quote</div>
+                  <div class="w-100 text-muted">7 hrs ago</div>
+                </li>
+                <li class="list-group-item text-right">
+                  <a href="#">
+                    <span class="align-middle">View All</span>
+                    <i class="material-icons md-18 align-middle text-primary">arrow_forward</i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <div class="media align-items-center">
+                    <i class="material-icons align-middle mr-3 text-warning">
+                      info_outline
+                    </i>
+                    <div class="media-body">
+                      <div class="w-100"><a href="profile.html">john</a> received a new <a href="#">quote</a></div>
+                      <div class="w-100 text-muted">4 secs ago</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="media align-items-center">
+                    <i class="material-icons align-middle mr-3 text-success">
+                      check_circle
+                    </i>
+                    <div class="media-body">
+                      <div class="w-100"><a href="profile.html">karen</a> completed a <a href="#">task</a></div>
+                      <div class="w-100 text-muted">25 mins ago</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="media align-items-center">
+                    <i class="material-icons align-middle mr-3 text-danger">
+                      warning
+                    </i>
+                    <div class="media-body">
+                      <div class="w-100"><a href="profile.html">jim</a> removed a <a href="#">task</a></div>
+                      <div class="w-100 text-muted">7 hrs ago</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item text-right">
+                  <a href="#">
+                    <span class="align-middle">View All</span>
+                    <i class="material-icons md-18 align-middle text-primary">arrow_forward</i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <div class="media align-items-center">
+                    <a href="profile.html">
+                      <img src="assets/images/avatars/person-8.jpg" class="img-fluid rounded-circle mr-3" width="35" alt="">
+                    </a>
+                    <div class="media-body">
+                      <div class="w-100">I started that project we talked...</div>
+                      <div class="w-100 text-muted">4 secs ago</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="media align-items-center">
+                    <a href="profile.html">
+                      <img src="assets/images/avatars/person-3.jpg" class="img-fluid rounded-circle mr-3" width="35" alt="">
+                    </a>
+                    <div class="media-body">
+                      <div class="w-100">Can we arrange a meeting?...</div>
+                      <div class="w-100 text-muted">25 mins ago</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="media align-items-center">
+                    <a href="profile.html">
+                      <img src="assets/images/avatars/person-4.jpg" class="img-fluid rounded-circle mr-3" width="35" alt="">
+                    </a>
+                    <div class="media-body">
+                      <div class="w-100">We need to fix some bugs...</div>
+                      <div class="w-100 text-muted">7 hrs ago</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item text-right">
+                  <a href="#">
+                    <span class="align-middle">View All</span>
+                    <i class="material-icons md-18 align-middle text-primary">arrow_forward</i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <li class="nav-item nav-account">
+      {% include 'layouts/_logo.html' %}
+    </li>
+  </ul>
 </nav>
