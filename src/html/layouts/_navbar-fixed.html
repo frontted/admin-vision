@@ -1,13 +1,13 @@
 <nav class="navbar navbar-fixed navbar-expand-lg {{ navbarClass if navbarClass else 'navbar--primary' }}   justify-content-between">
   <div class="d-flex flex-row">
-    <a class="h4 mb-0 text-uppercase navbar-brand" href="index.html">Vision</a>
-
-    <button class="btn btn-link navbar-toggler pl-0" type="button" data-toggle="sidebar">
+    <button class="btn btn-link navbar-toggler p-0 border-0" type="button" data-toggle="sidebar">
       <i class="material-icons align-middle md-36">short_text</i>
     </button>
 
-    <div class="dropdown show">
-      <a class="btn-search dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <a class="h4 mb-0 text-uppercase navbar-brand" href="index.html">Vision</a>
+
+    <div class="dropdown d-flex align-items-center">
+      <a class="btn-search dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-caret="false">
         <i class="material-icons md-18 align-middle">search</i>
       </a>
 
@@ -32,7 +32,7 @@
       </div>
     </div>
   </div>
-  <ul class="navbar-nav d-flex flex-row">
+  <ul class="navbar-nav d-none d-lg-flex">
     <li class="nav-item dropdown ml-0 {% if slug == 'index' %}nav-active {% endif %}">
       <a href="index.html" class="nav-link">Dashboard</a>
     </li>
@@ -434,7 +434,7 @@
       </div>
     </li>
 
-    <li class="nav-item nav-account">
+    <li class="nav-item nav-account d-none d-sm-flex">
       {% include 'layouts/_logo.html' %}
     </li>
   </ul>
