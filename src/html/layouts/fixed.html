@@ -11,32 +11,87 @@
   {% include 'layouts/_header.html' %}
 </head>
 <body>
-    <!-- main content -->
-    <div id="header" class="mdk-header js-mdk-header mdk-header--h-64 mdk-header--fixed"
-    data-effects="waterfall" data-fixed>
-      <div class="mdk-header__content">
-        {% include 'layouts/_navbar-fixed.html' %}
+  <!-- main content -->
+  <div id="header" class="mdk-header js-mdk-header mdk-header--h-64 mdk-header--fixed"
+  data-effects="waterfall" data-fixed>
+    <div class="mdk-header__content">
+      {% include 'layouts/_navbar-fixed.html' %}
+    </div>
+  </div>
+
+  {% if pageHeader %}
+    {% include 'layouts/_header-fixed.html' %}
+  {% endif %}
+
+  <div class="content-fixed {{ pageClass if pageClass }}">
+    {% block page %}
+      {% include 'partials/page.' + slug + '.html' ignore missing %}
+    {% endblock %}
+  </div>
+
+  <!-- drawer -->
+  <div class="mdk-drawer js-mdk-drawer" id="default-drawer" {% if drawerRight == true %} data-position="right" data-align="end" {% endif %}>
+    <div class="mdk-drawer__content mdk-drawer-top-navbar">
+      <div class="mdk-drawer__inner" data-simplebar data-simplebar-force-enabled="true">
+        {% include 'layouts/_sidebar.html' %}
       </div>
     </div>
+  </div>
 
-    {% if pageHeader %}
-      {% include 'layouts/_header-fixed.html' %}
-    {% endif %}
-
-    <div class="content-fixed {{ pageClass if pageClass }}">
-      {% block page %}
-        {% include 'partials/page.' + slug + '.html' ignore missing %}
-      {% endblock %}
-    </div>
-
-    <!-- drawer -->
-    <div class="mdk-drawer js-mdk-drawer" id="default-drawer" {% if drawerRight == true %} data-position="right" data-align="end" {% endif %}>
-      <div class="mdk-drawer__content mdk-drawer-top-navbar">
-        <div class="mdk-drawer__inner" data-simplebar data-simplebar-force-enabled="true">
-          {% include 'layouts/_sidebar.html' %}
+  <div class="footer text-center text-sm-left">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="row">
+            <div class="col-sm-4">
+              <h4>Layouts</h4>
+              <ul>
+                <li><a href="">Default Layout</a></li>
+                <li><a href="">Fluid Layout</a></li>
+                <li><a href="">Drawer Layout</a></li>
+                <li><a href="">Drawer Layout</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-4">
+              <h4>Pages</h4>
+              <ul>
+                <li><a href="">Default Layout</a></li>
+                <li><a href="">Fluid Layout</a></li>
+                <li><a href="">Drawer Layout</a></li>
+                <li><a href="">Drawer Layout</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-4">
+              <h4>Components</h4>
+              <ul>
+                <li><a href="">Default Layout</a></li>
+                <li><a href="">Fluid Layout</a></li>
+                <li><a href="">Drawer Layout</a></li>
+                <li><a href="">Drawer Layout</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <p>
+            <a href="" class="rounded-circle"></a>
+            <a href="" class="rounded-circle"></a>
+            <a href="" class="rounded-circle"></a>
+          </p>
+          <ul>
+            <li><a href="">www.frontted.com</a></li>
+            <li><a href="">contact@frontted.com</a></li>
+          </ul>
         </div>
       </div>
     </div>
+  </div>
+  <div class="footer footer-bg-darker text-center">
+    <div class="container">
+      <p><a href="" class="rounded-circle">V</a></p>
+      Need help to get started with Vision? <a href="">Cilck here</a>
+    </div>
+  </div>
 
   <!-- jQuery -->
   <script src="assets/vendor/jquery.min.js"></script>
