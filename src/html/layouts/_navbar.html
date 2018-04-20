@@ -1,16 +1,18 @@
 <nav class="navbar navbar-main navbar-expand-lg {{ navbarClass if navbarClass else 'navbar--primary' }} d-print-none">
-  <a class="h4 mb-0 text-uppercase navbar-brand" href="index.html">Vision</a>
+  <div class="container-fluid p-0">
+    <div class="d-flex align-items-center">
+      <button class="btn btn-link navbar-toggler p-0" type="button" data-toggle="sidebar">
+        <i class="material-icons align-middle md-36">short_text</i>
+      </button>
 
-  <button class="btn btn-link navbar-toggler pl-0" type="button" data-toggle="sidebar">
-    <i class="material-icons align-middle md-36">short_text</i>
-  </button>
+      <a class="h4 mb-0 text-uppercase navbar-brand" href="index.html">Vision</a>
 
-  <a href="#" class="btn-search">
-    <i class="material-icons md-18 align-middle">search</i>
-  </a>
+      <a href="#" class="btn-search">
+        <i class="material-icons md-18 align-middle">search</i>
+      </a>
+    </div>
 
-  <div class="collapse navbar-collapse" id="mainNavbar">
-    <ul class="navbar-nav navbar-right">
+    <ul class="navbar-nav navbar-right d-flex flex-row notifications">
 
       <li class="nav-item nav-dropdown">
         <div class="dropdown">
@@ -364,7 +366,7 @@
         </div>
       </li>
 
-      <li class="nav-item nav-account">
+      <li class="nav-item nav-account d-none d-sm-flex">
         {% include 'layouts/_logo.html' %}
       </li>
     </ul>

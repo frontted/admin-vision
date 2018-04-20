@@ -32,13 +32,52 @@
 
 .navbar {
   height: $navbar-height;
+  height: 80px;
   display: flex;
   align-items: center;
   z-index: 5;
 
+  .navbar-brand {
+    font-size: 28px;
+    letter-spacing: 0;
+    font-weight: 400;
+  }
+
+  .navbar-nav {
+    height: 100%;
+
+    .nav-item {
+      display: flex;
+      align-items: center;
+      .nav-link {
+        text-transform: uppercase;
+      }
+      &.nav-active .nav-link::before {
+        border-bottom-width: 4px;
+      }
+    }
+    .dropdown-menu {
+      position: absolute;
+    }
+    .dropdown-menu-right {
+      right: 0;
+      left: auto;
+    }
+  }
+
+  .navbar-toggler {
+    margin-right: $navbar-padding-x;
+  }
+
   &.navbar--primary {
     background: theme-color('primary');
     color: #ffffff;
+
+    .btn-search {
+      opacity: 1;
+      background-color: #4E8DCF;
+      color: #ADCAE8;
+    }
     .navbar-nav.navbar-right {
       .dropdown-toggle {
         color: rgba(255, 255, 255, .54);
@@ -85,6 +124,11 @@
     .navbar-toggler {
       color: rgba(255, 255, 255, 1);
     }
+    .navbar-brand {
+      &:hover {
+        color: rgba(255, 255, 255, .74);
+      }
+    }
   }
 
   &.bg-white {
@@ -97,15 +141,11 @@
       outline: none;
     }
     .navbar-nav.notifications {
-      .dropdown {
-        height: 30px;
-        line-height: 30px;
-      }
       .dropdown-toggle {
         color: rgba(55, 57, 76, .24);
-        &:hover, &:focus {
+        &:hover, 
+        &:focus {
           color: rgba(55, 57, 76, .54);
-          outline: none;
         }
       }
       .dropdown.show {
@@ -114,7 +154,6 @@
         }
       }
       .nav-item.nav-dropdown .dropdown-menu {
-        margin-top: 5px;
         .material-icons {
           color: rgba(255, 255, 255, 0.54);
         }
@@ -122,11 +161,6 @@
           background: theme-color('primary');
           color: #ffffff;
           box-shadow: 0 4px 8px -2px rgba(55, 57, 76, .54);
-          &--inner {
-            padding-top: $spacer;
-            padding-left: $spacer;
-            padding-right: $spacer;
-          }
         }
         .nav-tabs {
           .nav-link {
@@ -138,9 +172,6 @@
                 color: #ffffff;
               }
             }
-            &:not(.active) {
-              padding-bottom: .75rem;
-            }
           }
         }
       }
@@ -150,36 +181,67 @@
     }
   }
 
-  &.navbar-fixed, &.navbar-main {
-    .navbar-nav.notifications {
-      .nav-item {
-        &:not(:last-of-type) {
-          margin-right: 1.625rem;
+  .navbar-nav.notifications {
+    .dropdown {
+      height: 30px;
+      line-height: 30px;
+    }
+    .dropdown-toggle {
+      &:hover, 
+      &:focus {
+        outline: none;
+      }
+    }
+    .nav-item {
+      &:not(:last-of-type) {
+        margin-right: 1.625rem;
+        @include media-breakpoint-down(sm) {
+          margin-right: .8rem;
         }
       }
-      .nav-item.nav-dropdown .dropdown-menu {
-        .nav-tabs {
-          border: 0;
+    }
+    .nav-item.nav-dropdown .dropdown-menu {
+      margin-top: 5px;
+      .nav-tabs {
+        border: 0;
+      }
+      .list-group {
+        width: 350px;
+        .list-group-item {
+          padding: 1rem $spacer;
         }
-        .list-group {
-          width: 350px;
-          .list-group-item {
-            padding: 1rem $spacer;
+      }
+      .dropdown-head {
+        background: theme-color('primary');
+        color: #ffffff;
+        box-shadow: 0 4px 8px -2px rgba(55, 57, 76, .54);
+        &--inner {
+          padding-top: $spacer;
+          padding-left: $spacer;
+          padding-right: $spacer;
+        }
+      }
+      .nav-tabs {
+        .nav-link {
+          &.active {
+            background: none;
+            padding-bottom: .625rem;
+            border-bottom: .125rem solid #ffffff;
+            .material-icons {
+              color: #ffffff;
+            }
           }
-        }
-      }
-      [aria-labelledby="emailsNavDropdown"] {
-        .dropdown-head {
-          border-bottom: 0 !important;
+          &:not(.active) {
+            padding-bottom: .75rem;
+          }
         }
       }
     }
   }
+
   &.navbar-fixed {
     .navbar-brand {
       color: theme-color('text-color');
-      font-size: 28px;
-      font-weight: bold;
       color: #585969;
     }
     .navbar-nav {
@@ -191,7 +253,6 @@
           padding: 0 1.2rem;
           height: $navbar-height;
           line-height: $navbar-height;
-
         }
         &.nav-active {
           .nav-link {
@@ -254,8 +315,4 @@
 
 .mdk-header--fixed .navbar-fixed.bg-white {
   border-bottom: 1px solid #efefef;
-}
-
-.page-banner + .mdk-header--fixed {
-
 }
