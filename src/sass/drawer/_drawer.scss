@@ -30,11 +30,14 @@ nav.drawer {
     margin-bottom: $spacer;
   }
 
-  .drawer-spacer { padding: $spacer $spacer/2; }
+  .drawer-spacer { 
+    padding: 18px 20px !important;
+  }
 
   .drawer-menu {
     list-style: none;
     margin-bottom: $spacer;
+    padding: 0 .625rem;
     .drawer-menu-item {
       position: relative;
       &:last-of-type { border-bottom-color: transparent; }

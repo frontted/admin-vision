@@ -2,7 +2,7 @@
 <nav class="drawer {{ drawerClass if drawerClass else 'drawer--light' }}">
   <div class="drawer-spacer drawer-spacer-border">
     <div class="media align-items-center">
-      <span class="mr-2">{% include 'layouts/_logo.html' %}</span>
+      <span class="mr-2">{% import 'layouts/_logo.html' as logo %} {{ logo.component(47) }}</span>
       <div class="media-body">
         <a href="index.html" class="h5 m-0">Frontted</a>
         <div>
@@ -82,7 +82,7 @@
   </ul>
 
   <!-- STATS MENU -->
-  <ul class="drawer-menu drawer-stats" data-children=".drawer-submenu">
+  <ul class="drawer-menu drawer-stats drawer-spacer" data-children=".drawer-submenu">
     <div class="drawer-heading">
       Stats
     </div>
@@ -116,7 +116,7 @@
   </ul>
 
   <!-- RECENT ACTIVITY MENU -->
-  <ul class="drawer-menu drawer-activity" data-children=".drawer-submenu">
+  <ul class="drawer-menu drawer-activity drawer-spacer" data-children=".drawer-submenu">
     <div class="drawer-heading">
       Recent Activity
     </div>

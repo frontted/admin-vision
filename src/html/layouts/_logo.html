@@ -1,1 +1,4 @@
-<img src="https://pbs.twimg.com/profile_images/928893978266697728/3enwe0fO_400x400.jpg" class="rounded-circle" width="35" alt="">
+{% macro component(width=35) %}
+<img src="https://pbs.twimg.com/profile_images/928893978266697728/3enwe0fO_400x400.jpg" class="rounded-circle" width="{{ width }}" alt="">
+{% endmacro %}
+{{ component() }}
