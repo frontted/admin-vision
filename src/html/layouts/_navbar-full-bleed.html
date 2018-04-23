@@ -1,19 +1,20 @@
 <nav class="navbar navbar-main navbar-expand-lg {{ navbarClass if navbarClass else 'navbar--primary' }}">
+  <div class="container-fluid p-0">
+    <div class="d-flex align-items-center">
+      <button class="btn btn-link navbar-toggler pl-0" type="button" data-toggle="sidebar">
+        <i class="material-icons align-middle md-36">short_text</i>
+      </button>
 
-  <button class="btn btn-link navbar-toggler pl-0" type="button" data-toggle="sidebar">
-    <i class="material-icons align-middle md-36">short_text</i>
-  </button>
+      <a href="#" class="btn-search mr-2">
+        <i class="material-icons md-18 align-middle">search</i>
+      </a>
 
-  <a href="#" class="btn-search mr-2">
-    <i class="material-icons md-18 align-middle">search</i>
-  </a>
+      <span class="text-light d-none d-sm-block">Search</span>
+    </div>
 
-  <span class="text-light">Search</span>
+    <ul class="navbar-nav navbar-right flex-row notifications">
 
-  <div class="collapse navbar-collapse" id="mainNavbar">
-    <ul class="navbar-nav navbar-right">
-
-      <li class="nav-item nav-dropdown">
+      <li class="nav-item nav-dropdown d-none d-sm-flex">
         <div class="dropdown">
           <a class="dropdown-toggle dropdown-clear-caret" href="#" id="emailsNavDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="material-icons align-middle">email</i>
@@ -73,7 +74,7 @@
         </div>
       </li>
 
-      <li class="nav-item nav-dropdown">
+      <li class="nav-item nav-dropdown d-none d-sm-flex">
         <div class="dropdown">
           <a class="dropdown-toggle dropdown-clear-caret" href="#" id="messagesNavDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="material-icons align-middle">message</i>
