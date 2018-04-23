@@ -100,8 +100,8 @@ $active-border-width: .25rem;
 
   .drawer-stats {
     background: rgba(249, 249, 249, .11);
-    border-top: 2px solid $drawer-dark-border;
-    border-bottom: 2px solid $drawer-dark-border;
+    border-top: 1px solid $drawer-dark-border;
+    border-bottom: 1px solid $drawer-dark-border;
     padding: .625rem;
     .drawer-menu-item {
       margin-bottom: .625rem;

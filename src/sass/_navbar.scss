@@ -3,8 +3,7 @@
 }
 
 .mdk-drawer-top-navbar {
-  // margin-top: $navbar-height;
-  margin-top: 80px;
+  margin-top: $navbar-height;
 }
 .top-navbar {
   padding-top: $navbar-height + 20px;
@@ -32,7 +31,6 @@
 
 .navbar {
   height: $navbar-height;
-  height: 80px;
   display: flex;
   align-items: center;
   z-index: 5;
@@ -298,6 +296,10 @@
   .dropdown-menu {
     padding: 0;
   }
+}
+
+.navbar-light {
+  border-bottom: 1px solid $border-color;
 }
 
 .dropdown-toggle.dropdown-clear-caret {
