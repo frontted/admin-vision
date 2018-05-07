@@ -1,0 +1,71 @@
+<div class="container container--wide">
+  <ol class="breadcrumb">
+    <li>
+      <a href="index.html">Home</a>
+    </li>
+    <li>
+      <a href="#">UI Components</a>
+    </li>
+    <li>
+      Buttons
+    </li>
+  </ol>
+
+  <h1 class="h2 mb-0">Carousel</h1>
+  <div class="text-uppercase text-muted">
+    A component for cycling through elements with Mouse Grab (desktop) and Touch support.
+  </div>
+  <hr>
+
+  <div class="row d-block js-mdk-carousel">
+    <div class="mdk-carousel__content">
+      {% for item in [1,2,3] %}
+      <div class="col-12 col-md-6 mdk-carousel__item">
+        <div class="card card-body">
+          <blockquote>
+            <div class="avatar">
+              <img src="assets/images/carousel/avatar{{ item }}.png" alt="avatar" class="img-circle">
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia distinctio reiciendis iusto id, doloribus optio soluta laborum nobis dolor tempore velit porro maiores eveniet voluptas officia ipsa magnam aliquam. Perferendis?</p>
+          </blockquote>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="row d-block js-mdk-carousel">
+    <div class="mdk-carousel__content">
+      {% for item in [1,2,3,4,5,6,7,8] %}
+      <div class="col-12 col-sm-6 col-md-4 col-xl-3 mdk-carousel__item">
+        <div class="card">
+          <img class="img-fluid card-img-top" src="assets/images/carousel/300_{{ item }}.jpg" alt="Image">
+          <div class="card-body">
+            <h4 class="card__title">Card title</h4>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div style="max-width: 500px; margin: 0 auto;">
+    <div class="row d-block js-mdk-carousel">
+      <div class="mdk-carousel__content">
+        {% for item in [4,5,6] %}
+        <div class="col-12 mdk-carousel__item">
+          <div class="card">
+            <div class="card-img card-image--overlay">
+              <img class="img-fluid" src="assets/images/carousel/300_{{ item }}.jpg" alt="Image">
+            </div>
+            <div class="card-body" style="padding-top: 0; padding-bottom: 0;">
+              <h4 class="card__title card__title--raised">Card title</h4>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+</div>
