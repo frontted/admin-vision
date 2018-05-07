@@ -122,3 +122,123 @@
 .container {
   max-width: 940px;
 }
+
+// Buttons
+
+.btn-outline-white {
+  @include button-outline-variant(#ffffff);
+}
+
+// Choose
+
+.vision-choose-headline {
+  padding-top: $spacer;
+  padding-bottom: $spacer;
+  &--bt {
+    border-top: 1px solid $border-color;
+  }
+  p {
+    margin-bottom: 0;
+  }
+  @include media-breakpoint-up(lg) {
+    padding-top: $spacer*3;
+    padding-bottom: $spacer*3;
+  }
+  @include media-breakpoint-up(md) {
+    padding-top: $spacer*2;
+    padding-bottom: $spacer*2;
+  }
+}
+
+.vision-choose-header,
+.vision-choose-demos {
+  .container {
+    @include media-breakpoint-up(sm) {
+      max-width: 540px !important;
+    }
+    @include media-breakpoint-up(md) {
+      max-width: 720px !important;
+    }
+    @include media-breakpoint-up(lg) {
+      max-width: 960px !important;
+    }
+    @include media-breakpoint-up(xl) {
+      max-width: 1140px !important;
+    }
+  }
+}
+
+.vision-choose-header {
+  .navbar {
+    padding: 1.5rem 1rem;
+    height: auto;
+    small {
+      font-size: .9rem;
+      color: rgba(255,255,255,.8);
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    .navbar-brand-container {
+      max-width: 80%;
+    }
+    .btn {
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    h1 {
+      font-size: 2rem;
+    }
+  }
+  h1 {
+    margin-bottom: 20px;
+  }
+  p {
+    margin-bottom: 25px;
+    color: rgba(255,255,255,.8);
+  }
+  h1,
+  p {
+    hyphens: auto;
+  }
+  @include media-breakpoint-up(md) {
+    .btn + .btn {
+      margin-left: 10px;
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    .img-fluid {
+      position: relative;
+      transform: translateX(35px);
+    }
+  }
+}
+
+.vision-choose-demos {
+  padding-bottom: $spacer;
+  figure {
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+  }
+  figcaption {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #42434F;
+    transition: all 0.2s ease-in-out;
+    opacity: 0;
+  }
+  figure {
+    @include hover {
+      figcaption {
+        opacity: 1;
+      }
+    }
+  }
+}
