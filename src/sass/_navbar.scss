@@ -38,7 +38,11 @@
   .navbar-brand {
     font-size: 28px;
     letter-spacing: 0;
-    font-weight: 400;
+    font-weight: bold;
+    & + small {
+      margin-top: -5px;
+      display:block;
+    }
   }
 
   .navbar-nav {
@@ -141,7 +145,7 @@
     .navbar-nav.notifications {
       .dropdown-toggle {
         color: rgba(55, 57, 76, .24);
-        &:hover, 
+        &:hover,
         &:focus {
           color: rgba(55, 57, 76, .54);
         }
@@ -185,7 +189,7 @@
       line-height: 30px;
     }
     .dropdown-toggle {
-      &:hover, 
+      &:hover,
       &:focus {
         outline: none;
       }
@@ -241,6 +245,7 @@
     .navbar-brand {
       color: theme-color('text-color');
       color: #585969;
+      font-weight: bold;
     }
     .navbar-nav {
       .nav-item {
