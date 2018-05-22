@@ -1,3 +1,5 @@
+Object.values = Object.values || (obj => Object.keys(obj).map(key => obj[key]));
+
 require('theme-mix')
 
 // Enable sourcemaps
@@ -27,3 +29,4 @@ if (mix.inProduction()) {
   webpackConfig = merge(Config.webpackConfig, webpackConfig)
   mix.webpackConfig(webpackConfig)
 }
+

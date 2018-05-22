@@ -65,4 +65,7 @@
 
 .timeline-video {
   width: 100%;
+  border:0;
+  border-top: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
 }

@@ -10,8 +10,8 @@
     border: 0;
     color: $body-color;
     padding: 0 $spacer/2;
-     .material-icons {
-      color: $text-muted;
+    .material-icons {
+      color: rgba($text-muted,.5);
     }
   }
   .form-control:not(:first-child) {

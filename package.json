@@ -54,6 +54,7 @@
     "concurrently": "^3.4.0",
     "cross-env": "^4.0.0",
     "dateformat": "^3.0.2",
+    "es6-promise": "^4.2.4",
     "lite-server": "^2.2.0",
     "object.values": "^1.0.4",
     "surge": "^0.17.7",
