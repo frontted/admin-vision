@@ -104,9 +104,18 @@
     display: inline-flex;
     align-items: center;
     flex-direction: column;
-    opacity: .2;
-    background: rgba(255,255,255,.54);
+    background: rgba(255,255,255,.24);
     text-decoration: none;
+    color: rgba(255,255,255, .5);
+    vertical-align: middle;
+    font-size:20px;
+    i.material-icons {
+      height: 50px;
+      line-height: 50px;
+    }
+    &:hover {
+      color: #ffffff;
+    }
   }
 }
 .footer-bg-darker {
@@ -169,6 +178,9 @@
 }
 
 .vision-choose-header {
+  &--border {
+    border-bottom: 3px solid #ffffff;
+  }
   .navbar {
     padding: 1.5rem 1rem;
     height: auto;

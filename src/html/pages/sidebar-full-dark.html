@@ -8,6 +8,10 @@ contentClass: pt-0
 ---
 {% extends "layouts/full-bleed.html" %}
 
+{% block head %}
+  <link type="text/css" href="assets/css/vendor-morris.css" rel="stylesheet">
+{% endblock %}
+
 {%
   set orders = [
     {
@@ -47,3 +51,139 @@ contentClass: pt-0
     }
   ]
 %}
+
+{%
+  set rankings = [
+    {
+      user: 'Tara Knows',
+      image: 'assets/images/avatars/person-9.jpg',
+      revenue: '29,021'
+    },
+    {
+      user: 'Karen Smith',
+      image: 'assets/images/avatars/person-13.jpg',
+      revenue: '25,250'
+    },
+    {
+      user: 'Mark Ups',
+      image: 'assets/images/avatars/person-6.jpg',
+      revenue: '21,330'
+    },
+    {
+      user: 'Steven Short',
+      image: 'assets/images/avatars/person-5.jpg',
+      revenue: '17,740'
+    },
+    {
+      user: 'John Mix',
+      image: 'assets/images/avatars/person-7.jpg',
+      revenue: '13,120'
+    },
+    {
+      user: 'Karen Smith',
+      image: 'assets/images/avatars/person-13.jpg',
+      revenue: '10,880'
+    }
+  ]
+%}
+
+{% block scripts %}
+<script src="assets/vendor/morris.min.js"></script>
+<script src="assets/vendor/raphael.min.js"></script>
+<script>
+  $('.milestone-chart').each((index, element) => {
+    let ctx = element.getContext('2d')
+    let value1 = 60
+    let value2 = 100 - value1
+
+    new Chart(ctx, {
+      type: 'pie',
+      data: {
+        datasets: [{
+          data: [value1, value2],
+          borderWidth: 1,
+          backgroundColor: ['#ffffff', colors.color_bg]
+        }]
+      },
+      options: {
+        tooltips: { enabled: false },
+        cutoutPercentage: 85
+      }
+    })
+  });
+
+  // Sales Chart
+  new Chart($("#sales-chart")[0].getContext('2d'), {
+  type: 'line',
+  data: {
+    labels:
+    [
+    "01", "02", "03", "04",
+    "05", "06", "07", "08",
+    "09", "10", "11", "12",
+    "13"
+    ],
+    datasets: [
+    {
+      label: 'Sales',
+      data: [1890, 3290, 4120, 3950, 5100, 6000, 8000, 4000, 5000, 6000, 2000, 3000, 4000],
+      borderWidth: 2,
+      borderColor: colors.color_primary,
+      backgroundColor: colors.color_bg,
+      pointBackgroundColor: colors.color_primary
+    }
+    ]
+  },
+  options: {
+    maintainAspectRatio: false,
+    legend: {
+      display: false,
+      labels: { display: false }
+    },
+    tooltips: {
+      mode: 'index',
+      callbacks: {
+        footer: function(tooltipItems, data) {
+          var sum = 0;
+          tooltipItems.forEach(function(tooltipItem) {
+            sum += data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
+          });
+          return 'Sum: ' + sum;
+        },
+      },
+      footerFontStyle: 'normal'
+    },
+    scales: {
+      yAxes: [{
+        stacked: true,
+        gridLines: {
+          color: colors.border_color,
+          zeroLineColor: colors.border_color,
+        },
+        ticks: {
+         callback: function(value, index, values) {
+          if(parseInt(value) >= 1000){
+            return '$' + value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+          } else {
+            return '$' + value;
+          }
+        }
+      }
+    }],
+    xAxes: [{
+      gridLines : {
+        display : false
+      },
+      border: {
+        display: true,
+        color: colors.border_color,
+      },
+      ticks: {
+        beginAtZero: true
+      }
+    }]
+  }
+}
+});
+</script>
+{% endblock %}

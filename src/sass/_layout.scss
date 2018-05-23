@@ -44,7 +44,9 @@
   padding: 2rem;
   background: theme-color('primary');
   color: #ffffff;
-  border-radius: 5px;
+  &--rounded {
+    border-radius: 5px;
+  }
   img {
     margin-right: 2rem;
   }
