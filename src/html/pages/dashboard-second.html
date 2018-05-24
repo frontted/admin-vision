@@ -1,0 +1,142 @@
+---
+title: Vision
+slug: dashboard-second
+category: pages
+pageClass: top-navbar--soft
+navbarClass: navbar-light bg-white
+---
+{% extends "./layouts/fixed.html" %}
+
+{% block head %}
+  <link type="text/css" href="assets/css/vendor-morris.css" rel="stylesheet">
+  <link type="text/css" href="assets/css/vendor-bootstrap-datepicker.css" rel="stylesheet">
+{% endblock %}
+
+{%
+  set earnings = [
+    {
+      user: 'Steven Short',
+      main: '$1,742.00',
+      activity: 'Has earned',
+      user_image: 'assets/images/avatars/person-1.jpg',
+      time: '5 minutes ago'
+    },
+    {
+      user: 'Mark Ups',
+      main: '$4,120.55',
+      activity: 'Has earned',
+      user_image: 'assets/images/avatars/person-2.jpg',
+      time: '14 minutes ago'
+    },
+    {
+      user: 'Tara Knows',
+      main: 'video',
+      activity: 'Uploaded a new',
+      user_image: 'assets/images/avatars/person-3.jpg',
+      time: '32 minutes ago'
+    },
+    {
+      user: 'Karen Smith',
+      main: '$2,721.23',
+      activity: 'Has earned',
+      user_image: 'assets/images/avatars/person-4.jpg',
+      time: '3 hours ago'
+    },
+    {
+      user: 'John Smith',
+      main: 'video',
+      activity: 'Uploaded a new',
+      user_image: 'assets/images/avatars/person-5.jpg',
+      time: '4 hours ago'
+    },
+    {
+      user: 'Brian Doe',
+      main: '$12,012',
+      activity: 'Has earned',
+      user_image: 'assets/images/avatars/person-6.jpg',
+      time: '4 hours ago'
+    }
+  ]
+%}
+
+{%
+  set grossings = [
+    {
+      user_name: 'Steven Short',
+      amount: '1,742.00',
+      user_image: 'assets/images/avatars/person-1.jpg'
+    },
+    {
+      user_name: 'Mark Ups',
+      amount: '4,120.55',
+      user_image: 'assets/images/avatars/person-2.jpg'
+    },
+    {
+      user_name: 'Tara Knows',
+      amount: '1,742.00',
+      user_image: 'assets/images/avatars/person-3.jpg'
+    },
+    {
+      user_name: 'Karen Smith',
+      amount: '2,721.23',
+      user_image: 'assets/images/avatars/person-4.jpg'
+    },
+    {
+      user_name: 'John Smith',
+      amount: '1,742.00',
+      user_image: 'assets/images/avatars/person-5.jpg'
+    },
+    {
+      user_name: 'Brian Doe',
+      amount: '12,012',
+      user_image: 'assets/images/avatars/person-6.jpg'
+    }
+  ]
+%}
+
+{% block scripts %}
+<script src="assets/vendor/Chart.min.js"></script>
+<script src="assets/vendor/morris.min.js"></script>
+<script src="assets/vendor/raphael.min.js"></script>
+<script src="assets/vendor/bootstrap-datepicker.min.js"></script>
+<script src="assets/js/datepicker.js"></script>
+
+<script>
+  new Morris.Area({
+    element: 'morris-area-chart',
+    data: [
+    { year: '2017-01', a: 6352.27},
+    { year: '2017-02', a: 4309.98},
+    { year: '2017-03', a: 1465.98},
+    { year: '2017-04', a: 1298.25},
+    { year: '2017-05', a: 3209},
+    { year: '2017-06', a: 2083},
+    { year: '2017-07', a: 1285.23},
+    { year: '2017-08', a: 1289},
+    { year: '2017-09', a: 4430},
+    { year: '2017-10', a: 8921.19}
+    ],
+    xkey: 'year',
+    ykeys: ['a'],
+    labels: ['Earnings'],
+    lineColors: ['#fff'],
+    fillOpacity: '0.2',
+    gridEnabled: true,
+    gridTextColor: '#ffffff',
+    resize: true
+  });
+
+  new Morris.Donut({
+    element: 'morris-donut-chart',
+    data: [
+    { label: 'General', value: 20 },
+    { label: 'Software', value: 10 },
+    { label: 'Subscriptions', value: 5 },
+    { label: 'Products', value: 5 },
+    { label: 'Courses', value: 64 }
+    ],
+    resize: true,
+    colors: [colors.color_primary, colors.color_success, colors.color_warning, colors.color_danger, colors.color_blue]
+  });
+</script>
+{% endblock %}
