@@ -53,7 +53,8 @@ Vision works on the last two versions of every major browser. Specifically, we t
 
 ## Running the demos
 
-Preview [Vision PRO](http://demo.frontted.com/vision/260520180000/choose.html) online.
+Preview [Vision PRO](https://demo.frontted.com/vision/260520181000/choose.html) 
+online.
 
 ### Precompiled files
 
