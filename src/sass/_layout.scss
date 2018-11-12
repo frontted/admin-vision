@@ -1,3 +1,6 @@
+html {
+  -webkit-font-smoothing: antialiased;
+}
 .container--max {
   max-width: 1400px;
 }
@@ -15,7 +18,7 @@
 }
 
 .page-banner {
-  margin-top: 80px;
+  margin-top: $navbar-height;
   height: 355px;
   background: theme-color('primary');
   text-align: center;
@@ -26,8 +29,8 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  width: 91px;
-  height: 91px;
+  width: 80px;
+  height: 80px;
   background-color: theme-color('dark');
   color: #ffffff;
 }

@@ -103,6 +103,14 @@
   }
 }
 
+// 
+.page--headline {
+  min-height: 120px;
+  padding: $spacer 0;
+  background: theme-color("primary");
+  color:#fff;  
+}
+
 // DRAWER
 
 .mdk-drawer {

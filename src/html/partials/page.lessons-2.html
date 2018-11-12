@@ -1,3 +1,14 @@
+<div class="page--headline d-flex align-items-center mb-3">
+    <div class="container">
+      <div class="page-section mb-0">
+        <h1 class="h2 mb-0">Lessons #2</h1>
+        <div class="text-light">See what's new on Flow.</div>
+      </div>
+    </div>  
+  </div>
+
+  
+
 <div class="container container--wide">
   <ol class="breadcrumb">
     <li>
@@ -7,14 +18,9 @@
       <a href="#">Learning</a>
     </li>
     <li>
-      Lessons
+      Lessons2
     </li>
   </ol>
-
-  <div class="mb-3">
-    <h1 class="h2 mb-0">Recently Added</h1>
-    <div class="text-uppercase text-muted">See what's new on Flow.</div>
-  </div>
 
   <div class="card-deck">
     {% for lesson in lessons %}
@@ -26,7 +32,7 @@
           <img class="card-img-top" src="{{ lesson.image }}" alt="">
         </a>
         <div class="card-body">
-          <a href="learning.html" class="card-title">
+          <a href="learning.html" class="card-title text-regular">
             {{ lesson.title }}
           </a>
           <div class="card-text text-muted">
@@ -45,12 +51,11 @@
               </div>
               <div class="ml-auto">
                 <span class="align-middle">{{ lesson.likes }} likes</span>
-                <span class="text-muted mx-1">|</span>
                 <a href="#" class="text-muted">
                   {% if loop.index == 2 %}
-                    <i class="material-icons align-middle text-primary">favorite</i>
+                    <i class="material-icons md-18 align-middle text-success">favorite</i>
                   {% else %}
-                    <i class="material-icons align-middle">favorite</i>
+                    <i class="material-icons align-middle md-18">favorite</i>
                   {% endif %}
                 </a>
               </div>
@@ -96,12 +101,11 @@
               </div>
               <div class="ml-auto">
                 <span class="align-middle">{{ lesson.likes }} likes</span>
-                <span class="text-muted mx-1">|</span>
                 <a href="#" class="text-muted">
                   {% if loop.index == 4 %}
-                    <i class="material-icons align-middle text-primary">favorite</i>
+                    <i class="material-icons md-18 align-middle text-success">favorite</i>
                   {% else %}
-                    <i class="material-icons align-middle">favorite</i>
+                    <i class="material-icons md-18 align-middle">favorite</i>
                   {% endif %}
                 </a>
               </div>

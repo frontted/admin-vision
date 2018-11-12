@@ -36,7 +36,7 @@
   z-index: 5;
 
   .navbar-brand {
-    font-size: 28px;
+    font-size: 20px;
     letter-spacing: 0;
     font-weight: bold;
     & + small {
@@ -51,8 +51,11 @@
     .nav-item {
       display: flex;
       align-items: center;
+      
       .nav-link {
         text-transform: uppercase;
+        font-weight: 400;
+        
       }
       &.nav-active .nav-link::before {
         border-bottom-width: 4px;
@@ -139,8 +142,9 @@
     .text-light {
       color: theme-color('text-color') !important;
     }
-    .dropdown-toggle:focus {
-      outline: none;
+    .dropdown-toggle {
+      // &:hover { color: rgba(55, 57, 76, .54) !important;}
+      &:focus { outline: none;} 
     }
     .navbar-nav.notifications {
       .dropdown-toggle {
@@ -184,7 +188,7 @@
   }
 
   .navbar-nav.notifications {
-    .dropdown {
+    > .dropdown {
       height: 30px;
       line-height: 30px;
     }
@@ -250,12 +254,12 @@
     .navbar-nav {
       .nav-item {
         .nav-link {
-          font-size: 1.1rem;
+          font-size: 1rem;
           color: rgba(55, 57, 76, .54);
-          letter-spacing: 0.0625rem;
           padding: 0 1.2rem;
           height: $navbar-height;
           line-height: $navbar-height;
+          font-weight: 500;
         }
         &.nav-active {
           .nav-link {

@@ -49,15 +49,16 @@
   },
   "devDependencies": {
     "bootstrap-datepicker": "^1.7.1",
-    "browser-sync": "^2.18.13",
-    "browser-sync-webpack-plugin": "^1.2.0",
     "concurrently": "^3.4.0",
     "cross-env": "^4.0.0",
     "dateformat": "^3.0.2",
     "es6-promise": "^4.2.4",
+    "browser-sync": "^2.26.3",
+    "browser-sync-webpack-plugin": "^1.2.0",
     "lite-server": "^2.2.0",
-    "object.values": "^1.0.4",
-    "surge": "^0.17.7",
-    "theme-mix": "0.4"
+    "nunjucks-html-loader": "github:lazabogdan/nunjucks-html-loader#front-matter",
+    "surge": "^0.20.1",
+    "theme-mix": "^1.0.1",
+    "watch-object": "^1.1.2"
   }
 }
